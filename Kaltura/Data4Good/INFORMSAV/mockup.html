@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INFORMSAV — Data & AI Career Guide (Mockup)</title>
+<meta name="description" content="Mockup: an agentic avatar experience that reads a CV or profile text and guides the user toward relevant data/analytics/AI careers, education, content, and job resources.">
+<style>
+  :root {
+    --bg: #f7f6fb;
+    --panel: #ffffff;
+    --panel-2: #f4f1fb;
+    --border: #e4defa;
+    --text: #1c1330;
+    --text-dim: #6c6480;
+    --accent: #5b2c83;
+    --accent-dark: #401f5e;
+    --accent-2: #ff6a3d;
+    --accent-2-soft: #fff1ea;
+    --accent-soft: #efe6fb;
+    --chip-bg: #faf9fd;
+    --user-bubble: #efe6fb;
+    --assistant-bubble: #ffffff;
+    --card-bg: #ffffff;
+    --shadow: 0 10px 30px rgba(91, 44, 131, 0.08);
+    --radius: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.5; }
+  a { color: var(--accent); }
+
+  header.hero {
+    padding: 28px 24px 20px;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--accent-2); background: var(--accent-2-soft);
+    border: 1px solid #ffd9c6; padding: 6px 14px; border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  h1 { font-size: clamp(24px, 3vw, 32px); line-height: 1.25; margin: 0 0 14px; color: var(--accent-dark); letter-spacing: -0.01em; }
+  .hero p.sub { color: var(--text-dim); font-size: 15px; max-width: 600px; margin: 0 auto; }
+  .mock-badge {
+    display: inline-block; margin-top: 14px; font-size: 11.5px; font-weight: 700;
+    color: var(--accent-2); background: var(--accent-2-soft); border: 1px solid #ffd9c6;
+    padding: 4px 10px; border-radius: 999px; letter-spacing: 0.03em;
+  }
+
+  main { max-width: 1080px; margin: 0 auto; padding: 8px 20px 50px; display: flex; flex-direction: column; gap: 18px; }
+
+  section.panel { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
+  .panel h2 { font-size: 15px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-dim); margin: 0 0 4px; }
+  .panel .panel-hint { font-size: 13px; color: var(--text-dim); margin: 0 0 16px; }
+
+  .intake-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 720px) { .intake-grid { grid-template-columns: 1fr; } }
+
+  .field-block { display: flex; flex-direction: column; gap: 6px; }
+  .field-block label { font-size: 13px; font-weight: 600; color: var(--text); }
+  .field-block .field-note { font-size: 11.5px; color: var(--text-dim); }
+
+  textarea, input[type="text"], input[type="url"] {
+    width: 100%; background: var(--panel-2); border: 1px solid var(--border);
+    border-radius: 10px; color: var(--text); padding: 10px 12px; font-size: 14px;
+    font-family: inherit;
+  }
+  textarea { min-height: 90px; resize: vertical; }
+  textarea:focus, input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+  .file-drop {
+    border: 1.5px dashed var(--border); border-radius: 10px; background: var(--panel-2);
+    padding: 14px; text-align: center; font-size: 13px; color: var(--text-dim);
+  }
+  .file-drop input[type="file"] { display: block; margin: 8px auto 0; font-size: 12.5px; }
+  .file-status { font-size: 12px; margin-top: 6px; color: var(--accent-dark); font-weight: 600; min-height: 16px; }
+
+  .linkedin-warning {
+    font-size: 12px; color: var(--accent-2); background: var(--accent-2-soft);
+    border: 1px solid #ffd9c6; border-radius: 8px; padding: 8px 10px; margin-top: 6px;
+    display: none;
+  }
+  .linkedin-warning.show { display: block; }
+
+  .intake-footer { display: flex; align-items: center; gap: 14px; margin-top: 18px; flex-wrap: wrap; }
+  .generate-btn {
+    padding: 12px 20px; border-radius: 10px; border: none;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: white;
+    font-weight: 700; font-size: 14.5px; cursor: pointer; transition: filter 0.15s ease;
+  }
+  .generate-btn:hover { filter: brightness(1.06); }
+  .generate-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+  .reset-link { font-size: 12.5px; color: var(--text-dim); background: none; border: none; cursor: pointer; text-decoration: underline; }
+
+  .chat-panel { display: flex; flex-direction: column; min-height: 300px; }
+  .chat-log { flex: 1; display: flex; flex-direction: column; gap: 16px; }
+  .empty-state { margin: auto; text-align: center; color: var(--text-dim); padding: 36px 10px; }
+  .empty-state .big-icon { font-size: 32px; margin-bottom: 10px; }
+  .empty-state p { max-width: 380px; margin: 6px auto 0; font-size: 13.5px; }
+
+  .quick-start-row { margin-top: 20px; }
+  .quick-start-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); margin: 0 0 10px; }
+  .quick-start-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 480px; margin: 0 auto; }
+  .quick-start-chip {
+    font-size: 13px; font-weight: 600; padding: 8px 14px; border-radius: 999px;
+    border: 1px solid #ddc9f5; background: var(--accent-soft); color: var(--accent-dark);
+    cursor: pointer;
+  }
+  .quick-start-chip:hover { background: #e4d5f7; }
+
+  .msg { display: flex; gap: 10px; max-width: 100%; }
+  .msg.user { justify-content: flex-end; }
+  .msg .avatar {
+    width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center;
+    justify-content: center; font-size: 15px; flex-shrink: 0; background: var(--panel-2); border: 1px solid var(--border);
+  }
+  .msg.assistant .avatar { background: linear-gradient(135deg, var(--accent), var(--accent-2)); }
+  .bubble { background: var(--assistant-bubble); border: 1px solid var(--border); padding: 14px 16px; border-radius: 14px; font-size: 14.5px; max-width: 680px; }
+  .msg.user .bubble { background: var(--user-bubble); border-color: #ddc9f5; }
+  .msg.assistant .bubble { max-width: 100%; }
+  .bubble.intro { color: var(--text-dim); font-style: italic; }
+
+  .track-card { border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; margin-top: 12px; background: var(--card-bg); }
+  .track-card h3 { margin: 0 0 4px; font-size: 15px; color: var(--accent-dark); }
+  .track-card .track-desc { font-size: 13px; color: var(--text-dim); margin-bottom: 8px; }
+  .track-card .match-note { font-size: 12px; color: var(--accent-2); font-weight: 600; margin-bottom: 10px; }
+
+  .resource-group { margin-top: 10px; }
+  .resource-group-label { font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-dim); font-weight: 700; margin-bottom: 5px; }
+  .resource-list { margin: 0; padding-left: 18px; font-size: 13px; color: var(--text); }
+  .resource-list li { margin-bottom: 3px; }
+  .resource-list .tier { font-size: 11px; color: var(--text-dim); }
+
+  .closing-note { font-size: 12.5px; color: var(--text-dim); border-top: 1px dashed var(--border); margin-top: 16px; padding-top: 12px; }
+  .closing-note.disclaimer { font-style: italic; }
+
+  .actions-row { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+  .actions-row button { font-size: 12.5px; padding: 7px 12px; border-radius: 8px; border: 1px solid var(--border); background: var(--panel-2); color: var(--text); cursor: pointer; }
+  .actions-row button:hover { border-color: var(--accent); }
+
+  .typing { display: inline-flex; gap: 4px; align-items: center; padding: 4px 0; }
+  .typing span { width: 6px; height: 6px; border-radius: 50%; background: var(--text-dim); animation: bounce 1.2s infinite ease-in-out; }
+  .typing span:nth-child(2) { animation-delay: 0.15s; }
+  .typing span:nth-child(3) { animation-delay: 0.3s; }
+  @keyframes bounce { 0%, 60%, 100% { transform: translateY(0); opacity: 0.5; } 30% { transform: translateY(-4px); opacity: 1; } }
+
+  footer.site-footer { text-align: center; font-size: 12px; color: var(--text-dim); padding: 0 20px 40px; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <span class="eyebrow">Data4Good — INFORMSAV</span>
+  <h1>Find your next step into a data, analytics, or AI career</h1>
+  <p class="sub">Upload your resume, paste your LinkedIn profile text, or just describe where you're at —
+  the guide will point you toward relevant career paths, learning resources, articles, and roles to search for.</p>
+  <span class="mock-badge">Interactive mockup — sample data, not live sources</span>
+</header>
+
+<main>
+  <section class="panel" aria-labelledby="live-avatar-heading">
+    <h2 id="live-avatar-heading">Talk to the live avatar</h2>
+    <p class="panel-hint">This is the actual Kaltura avatar for INFORMSAV, embedded live — separate from the guidance preview below, which just demonstrates the resource-matching logic with sample data.</p>
+    <div style="width: 100%; height: 600px"><div id="genie-container" style="width: 100%; height: 100%"></div></div>
+  </section>
+
+  <section class="panel" aria-labelledby="intake-heading">
+    <h2 id="intake-heading">1. Tell the guide about you</h2>
+    <p class="panel-hint">Any one of these is enough to get started — the more you provide, the more specific the guidance.</p>
+
+    <div class="intake-grid">
+      <div class="field-block">
+        <label for="resumeText">Paste your resume or LinkedIn profile text</label>
+        <textarea id="resumeText" placeholder="e.g. 6 years as a high school math teacher. Comfortable with Excel and Google Sheets, some experience building data-driven reports for administrators. Looking to move into a more analytical role..."></textarea>
+        <span class="field-note">This mockup reads whatever text you paste here — no data leaves your browser.</span>
+      </div>
+
+      <div class="field-block">
+        <label for="cvFile">Or upload a CV file</label>
+        <div class="file-drop">
+          Accepts .txt or .pdf
+          <input type="file" id="cvFile" accept=".txt,.pdf,.doc,.docx">
+          <div class="file-status" id="fileStatus"></div>
+        </div>
+        <span class="field-note">.pdf text is extracted in-browser (pdf.js). .doc/.docx aren't parsed in this mockup — please paste the text instead.</span>
+      </div>
+
+      <div class="field-block">
+        <label for="linkedinUrl">Or paste your LinkedIn profile URL</label>
+        <input type="url" id="linkedinUrl" placeholder="https://www.linkedin.com/in/your-name">
+        <div class="linkedin-warning" id="linkedinWarning">LinkedIn doesn't allow profiles to be fetched from a URL. Please paste your profile's About/Experience text into the field on the left instead — a real integration would use LinkedIn sign-in (OAuth) with your permission.</div>
+      </div>
+
+      <div class="field-block">
+        <label for="selfDescription">Or just describe where you're at</label>
+        <textarea id="selfDescription" placeholder="e.g. I'm a nurse who wants to move into healthcare analytics but I don't know where to start."></textarea>
+      </div>
+    </div>
+
+    <div class="intake-footer">
+      <button class="generate-btn" id="generateBtn">Get guidance</button>
+      <button class="reset-link" id="resetBtn">Start over</button>
+    </div>
+  </section>
+
+  <section class="panel chat-panel" aria-labelledby="chat-heading">
+    <h2 id="chat-heading" style="margin-bottom:14px;">Guidance for you</h2>
+    <div class="chat-log" id="chatLog">
+      <div class="empty-state" id="emptyState"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  INFORMSAV Career Guide — interactive mockup for internal review. Career tracks, courses, articles, and job-search
+  terms shown in the guidance preview below are illustrative sample content, not a live or verified resource feed.
+  Note: the live avatar above loads a script from Kaltura's CDN and requires this page to be served over https
+  (e.g. via Netlify) — it will not load when the file is opened directly from disk. If deployed on Netlify with
+  the included <code>career-guidance</code> function and an API key configured, the guidance preview below calls
+  Claude live instead of matching sample data — see <code>netlify/functions/career-guidance.js</code>.
+</footer>
+
+<script type="module">
+try {
+  const { embeds } = await import('https://unisphere.nvp1.ovp.kaltura.com/v1/loader/index.esm.js');
+  const { destroy, apis } = await embeds.workspace({
+    env: 'us',
+    apis: ['genieChat'],
+    session: {
+      widgetId: '1_ncocz0bt',
+      partnerId: 6557042,
+    },
+  });
+  const { remove } = apis.genieChat.contained({ elementId: 'genie-container' });
+} catch (error) {
+  console.error('Failed to create embeds:', error);
+}
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+if (window['pdfjsLib']) {
+  pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+}
+
+// --- Sample career-track knowledge library (illustrative — see knowledge-base.md §4) ---
+const CAREER_LIBRARY = [
+  {
+    id: "data-analyst",
+    title: "Data Analyst / BI Analyst",
+    description: "Turns raw data into reports and dashboards that help people make decisions. Common on-ramp role.",
+    keywords: ["excel", "spreadsheet", "sheets", "reporting", "dashboard", "sql", "tableau", "power bi", "data-driven", "analysis", "metrics", "kpi"],
+    education: [
+      { name: "Google Data Analytics Certificate", tier: "Low cost · ~6 months, self-paced" },
+      { name: "SQL for Data Analysis (beginner)", tier: "Free/low cost · self-paced" },
+      { name: "Tableau Fundamentals", tier: "Low cost · a few weeks" }
+    ],
+    content: [
+      "How teachers and educators are moving into analytics — career-change stories",
+      "SQL vs. spreadsheets: when to make the jump"
+    ],
+    jobSearchTerms: ["junior data analyst", "analytics associate", "reporting analyst"],
+    community: ["Local data analytics meetup", "r/dataanalysis community"]
+  },
+  {
+    id: "data-scientist",
+    title: "Data Scientist",
+    description: "Builds statistical and machine-learning models to answer harder, more open-ended questions from data.",
+    keywords: ["python", "machine learning", "statistics", "model", "regression", "r language", "pandas", "numpy", "predictive", "ml", "data science"],
+    education: [
+      { name: "Python for Data Science (intro)", tier: "Free/low cost · self-paced" },
+      { name: "Applied Statistics certificate", tier: "Moderate cost · a few months" },
+      { name: "Machine Learning Specialization", tier: "Low cost · ~3 months" }
+    ],
+    content: [
+      "From analyst to data scientist: what actually changes day to day",
+      "The math you actually need to get started in data science"
+    ],
+    jobSearchTerms: ["junior data scientist", "data science associate"],
+    community: ["Kaggle community & competitions", "Local data science meetup"]
+  },
+  {
+    id: "data-ml-engineer",
+    title: "Data / ML Engineer",
+    description: "Builds and maintains the pipelines and infrastructure that get data and models into production.",
+    keywords: ["engineer", "pipeline", "etl", "cloud", "aws", "azure", "spark", "kubernetes", "software", "backend", "infrastructure", "devops", "mlops"],
+    education: [
+      { name: "Data Engineering on [cloud provider] fundamentals", tier: "Moderate cost · ~2-3 months" },
+      { name: "SQL + Python for data pipelines", tier: "Low cost · self-paced" }
+    ],
+    content: [
+      "What a data engineer actually builds, in plain language",
+      "Moving from software engineering into data/ML engineering"
+    ],
+    jobSearchTerms: ["data engineer", "junior ML engineer", "platform engineer, data"],
+    community: ["Local data engineering meetup"]
+  },
+  {
+    id: "ai-product-manager",
+    title: "AI Product Manager",
+    description: "Defines what an AI-powered product or feature should do and works across data, engineering, and design to ship it.",
+    keywords: ["product manager", "product management", "roadmap", "stakeholder", "requirements", "ai product", "user research", "pm"],
+    education: [
+      { name: "AI Product Management fundamentals", tier: "Moderate cost · a few weeks" },
+      { name: "Intro to Machine Learning for non-engineers", tier: "Free/low cost · self-paced" }
+    ],
+    content: [
+      "What makes AI product management different from regular PM work",
+      "How to talk credibly about ML with an engineering team"
+    ],
+    jobSearchTerms: ["AI product manager", "associate product manager, data/AI"],
+    community: ["Product-led AI community/newsletter"]
+  },
+  {
+    id: "data-governance-ethics",
+    title: "Data Governance / AI Ethics & Policy",
+    description: "Focuses on how data and AI systems should be used responsibly — privacy, bias, compliance, policy.",
+    keywords: ["policy", "governance", "compliance", "ethics", "privacy", "law", "regulation", "risk", "responsible ai", "gdpr"],
+    education: [
+      { name: "AI Ethics & Governance certificate", tier: "Moderate cost · a few months" },
+      { name: "Data Privacy fundamentals (e.g. GDPR/CCPA basics)", tier: "Low cost · self-paced" }
+    ],
+    content: [
+      "Why every data team needs someone thinking about governance",
+      "Careers at the intersection of policy and AI"
+    ],
+    jobSearchTerms: ["data governance analyst", "AI policy associate", "responsible AI specialist"],
+    community: ["Responsible AI practitioner community"]
+  },
+  {
+    id: "analytics-translator",
+    title: "Analytics Translator",
+    description: "A hybrid, business-facing role: connects what the data/technical team builds to what decision-makers actually need.",
+    keywords: ["stakeholder", "business", "communication", "presentation", "cross-functional", "translator", "consulting", "requirements gathering"],
+    education: [
+      { name: "Data storytelling for business audiences", tier: "Low cost · a few weeks" },
+      { name: "Intro to SQL (for translators, not engineers)", tier: "Free · self-paced" }
+    ],
+    content: [
+      "The 'analytics translator' role, explained",
+      "Why domain experience is your advantage, not a gap"
+    ],
+    jobSearchTerms: ["business analyst, data", "analytics translator", "data strategy associate"],
+    community: ["Cross-functional analytics community of practice"]
+  },
+  {
+    id: "data-storytelling-viz",
+    title: "Data Visualization / Storytelling Specialist",
+    description: "Turns complex analysis into visuals and narratives that are clear and persuasive to a non-technical audience.",
+    keywords: ["visualization", "design", "storytelling", "tableau", "d3", "infographic", "communication", "chart", "figma"],
+    education: [
+      { name: "Data Visualization fundamentals", tier: "Low cost · a few weeks" },
+      { name: "Storytelling with Data course", tier: "Moderate cost · self-paced" }
+    ],
+    content: [
+      "The difference between a chart and a story",
+      "Portfolio tips for data visualization roles"
+    ],
+    jobSearchTerms: ["data visualization specialist", "analytics communications associate"],
+    community: ["Data visualization society / community"]
+  },
+  {
+    id: "research-applied-scientist",
+    title: "Research / Applied Scientist",
+    description: "Deep, often research-driven work — designing experiments, publishing findings, advancing methods.",
+    keywords: ["research", "phd", "publication", "experiment", "academic", "thesis", "applied scientist", "lab"],
+    education: [
+      { name: "Graduate program in a quantitative field (if pursuing this track long-term)", tier: "High cost/time · multi-year" },
+      { name: "Applied research methods short course", tier: "Moderate cost · a few months" }
+    ],
+    content: [
+      "Applied scientist vs. data scientist: what's actually different",
+      "Making the leap from academic research to industry"
+    ],
+    jobSearchTerms: ["applied scientist", "research scientist, data/AI"],
+    community: ["Field-specific research community/conference"]
+  }
+];
+
+const QUICK_START_EXAMPLES = [
+  { icon: "👩‍🏫", label: "Teacher exploring analytics", text: "6 years as a high school math teacher. Comfortable with Excel and Google Sheets, built data-driven reports for administrators. No formal coding experience. Looking to move into a more analytical role." },
+  { icon: "🧮", label: "Excel-heavy business analyst", text: "3 years as a business analyst. Heavy Excel user, some exposure to Power BI dashboards and stakeholder reporting. Curious about data science but haven't coded before." },
+  { icon: "💻", label: "CS grad, no data experience", text: "Recent computer science graduate. Comfortable with Python and software engineering basics, but no formal data or ML coursework yet. Interested in data/ML engineering roles." },
+  { icon: "🏥", label: "Healthcare career-changer", text: "I'm a nurse who wants to move into healthcare analytics but I don't know where to start. I'm comfortable with spreadsheets from charting and reporting." }
+];
+
+const resumeTextEl = document.getElementById("resumeText");
+const selfDescriptionEl = document.getElementById("selfDescription");
+const linkedinUrlEl = document.getElementById("linkedinUrl");
+const linkedinWarningEl = document.getElementById("linkedinWarning");
+const cvFileEl = document.getElementById("cvFile");
+const fileStatusEl = document.getElementById("fileStatus");
+const chatLog = document.getElementById("chatLog");
+const generateBtn = document.getElementById("generateBtn");
+const resetBtn = document.getElementById("resetBtn");
+
+let extractedFileText = "";
+
+function escapeHtml(str) {
+  const div = document.createElement("div");
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+linkedinUrlEl.addEventListener("input", () => {
+  linkedinWarningEl.classList.toggle("show", linkedinUrlEl.value.trim().length > 0);
+});
+
+cvFileEl.addEventListener("change", async () => {
+  const file = cvFileEl.files[0];
+  extractedFileText = "";
+  if (!file) { fileStatusEl.textContent = ""; return; }
+
+  if (file.name.toLowerCase().endsWith(".pdf")) {
+    fileStatusEl.textContent = "Extracting text from PDF…";
+    try {
+      const buf = await file.arrayBuffer();
+      const pdf = await pdfjsLib.getDocument({ data: buf }).promise;
+      let text = "";
+      for (let i = 1; i <= pdf.numPages; i++) {
+        const page = await pdf.getPage(i);
+        const content = await page.getTextContent();
+        text += content.items.map(it => it.str).join(" ") + "\n";
+      }
+      extractedFileText = text;
+      fileStatusEl.textContent = `Extracted text from ${pdf.numPages} page(s) of ${file.name}.`;
+    } catch (e) {
+      fileStatusEl.textContent = "Couldn't extract text from that PDF — try pasting the text instead.";
+    }
+  } else if (file.name.toLowerCase().endsWith(".txt")) {
+    extractedFileText = await file.text();
+    fileStatusEl.textContent = `Loaded ${file.name}.`;
+  } else {
+    fileStatusEl.textContent = ".doc/.docx isn't parsed in this mockup — please paste the text into the field at left.";
+  }
+});
+
+function scoreTrack(track, lowerText) {
+  let score = 0;
+  const matched = [];
+  track.keywords.forEach(kw => {
+    if (lowerText.includes(kw.toLowerCase())) { score += 1; matched.push(kw); }
+  });
+  return { score, matched };
+}
+
+function buildUserSummary(combinedText) {
+  const trimmed = combinedText.trim();
+  if (!trimmed) return "I'd like general guidance on data/analytics/AI careers.";
+  return trimmed.length > 260 ? trimmed.slice(0, 260) + "…" : trimmed;
+}
+
+function addUserMessage(text) {
+  const el = document.createElement("div");
+  el.className = "msg user";
+  el.innerHTML = `<div class="bubble">${escapeHtml(text)}</div><div class="avatar">🙋</div>`;
+  chatLog.appendChild(el);
+  chatLog.scrollTop = chatLog.scrollHeight;
+}
+
+function addTypingIndicator() {
+  const el = document.createElement("div");
+  el.className = "msg assistant";
+  el.id = "typingIndicator";
+  el.innerHTML = `<div class="avatar">🤖</div><div class="bubble"><div class="typing"><span></span><span></span><span></span></div></div>`;
+  chatLog.appendChild(el);
+  chatLog.scrollTop = chatLog.scrollHeight;
+}
+
+function removeTypingIndicator() {
+  const el = document.getElementById("typingIndicator");
+  if (el) el.remove();
+}
+
+function trackCardHtml(track, matched) {
+  const matchNote = matched.length
+    ? `Matched on: ${matched.slice(0, 5).map(m => escapeHtml(m)).join(", ")}`
+    : "";
+  return `
+    <div class="track-card">
+      <h3>${escapeHtml(track.title)}</h3>
+      <div class="track-desc">${escapeHtml(track.description)}</div>
+      ${matchNote ? `<div class="match-note">${matchNote}</div>` : ""}
+      <div class="resource-group">
+        <div class="resource-group-label">📚 Learn</div>
+        <ul class="resource-list">
+          ${track.education.map(e => `<li>${escapeHtml(e.name)} <span class="tier">— ${escapeHtml(e.tier)}</span></li>`).join("")}
+        </ul>
+      </div>
+      <div class="resource-group">
+        <div class="resource-group-label">📰 Read</div>
+        <ul class="resource-list">${track.content.map(c => `<li>${escapeHtml(c)}</li>`).join("")}</ul>
+      </div>
+      <div class="resource-group">
+        <div class="resource-group-label">💼 Jobs to search for</div>
+        <ul class="resource-list">${track.jobSearchTerms.map(j => `<li>"${escapeHtml(j)}"</li>`).join("")}</ul>
+      </div>
+      <div class="resource-group">
+        <div class="resource-group-label">🤝 Community</div>
+        <ul class="resource-list">${track.community.map(c => `<li>${escapeHtml(c)}</li>`).join("")}</ul>
+      </div>
+    </div>
+  `;
+}
+
+function buildAssistantHtml(combinedText) {
+  const lowerText = combinedText.toLowerCase();
+  const scored = CAREER_LIBRARY
+    .map(track => ({ track, ...scoreTrack(track, lowerText) }))
+    .filter(x => x.score > 0)
+    .sort((a, b) => b.score - a.score);
+
+  let html = "";
+
+  if (!combinedText.trim()) {
+    return `<div class="bubble intro">I don't have anything to go on yet — share your background above (resume text, a CV, or a short description) and I'll match you to relevant paths and resources.</div>`;
+  }
+
+  if (!scored.length) {
+    html += `<div class="bubble intro">I couldn't confidently match your background to a specific track yet. A couple of quick questions would help: have you done any hands-on work with data — even informally, like spreadsheets or dashboards? And is there a specific direction you're curious about (technical build, research, policy, or business-facing)? Tell me more and I'll narrow it down.</div>`;
+    html += `<div class="closing-note disclaimer">These are starting points for exploration, not a placement guarantee — a career advisor or mentor can help turn this into a concrete plan.</div>`;
+    return html;
+  }
+
+  const top = scored.slice(0, 3);
+  html += `<div class="bubble intro">Based on what you shared, here's where I'd start looking:</div>`;
+  top.forEach(({ track, matched }) => {
+    html += trackCardHtml(track, matched);
+  });
+
+  if (scored.length > top.length) {
+    const others = scored.slice(top.length, top.length + 2).map(x => x.track.title);
+    html += `<div class="closing-note">Also worth a look, based on secondary matches: ${others.map(t => `<i>${escapeHtml(t)}</i>`).join(", ")}.</div>`;
+  }
+
+  html += `<div class="closing-note disclaimer">These are starting points for exploration, not a placement guarantee — a career advisor or mentor can help turn this into a concrete plan.</div>`;
+  return html;
+}
+
+function addAssistantMessage(html) {
+  const el = document.createElement("div");
+  el.className = "msg assistant";
+  el.innerHTML = `<div class="avatar">🤖</div><div class="bubble">${html}
+    <div class="actions-row">
+      <button data-action="copy">Copy guidance as text</button>
+      <button data-action="refine">Add more detail &amp; regenerate</button>
+    </div>
+  </div>`;
+  chatLog.appendChild(el);
+  chatLog.scrollTop = chatLog.scrollHeight;
+
+  el.querySelector('[data-action="copy"]').addEventListener("click", () => {
+    const text = el.querySelector(".bubble").innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = el.querySelector('[data-action="copy"]');
+      const original = btn.textContent;
+      btn.textContent = "Copied!";
+      setTimeout(() => (btn.textContent = original), 1500);
+    });
+  });
+  el.querySelector('[data-action="refine"]').addEventListener("click", () => {
+    selfDescriptionEl.focus();
+    selfDescriptionEl.scrollIntoView({ behavior: "smooth", block: "center" });
+  });
+}
+
+function renderEmptyState() {
+  const el = document.getElementById("emptyState");
+  if (!el) return;
+  el.innerHTML = `
+    <div class="big-icon">🧭</div>
+    <p><b>Nothing generated yet.</b> Share your background above — or try an example — then select <i>Get guidance</i>.</p>
+    <div class="quick-start-row">
+      <p class="quick-start-label">Or try an example</p>
+      <div class="quick-start-chips">
+        ${QUICK_START_EXAMPLES.map((ex, i) => `<button class="quick-start-chip" data-quick-index="${i}" type="button">${ex.icon} ${escapeHtml(ex.label)}</button>`).join("")}
+      </div>
+    </div>
+  `;
+  el.querySelectorAll(".quick-start-chip").forEach(btn => {
+    btn.addEventListener("click", () => handleQuickStart(QUICK_START_EXAMPLES[Number(btn.dataset.quickIndex)]));
+  });
+}
+
+function handleQuickStart(example) {
+  resumeTextEl.value = example.text;
+  selfDescriptionEl.value = "";
+  linkedinUrlEl.value = "";
+  linkedinWarningEl.classList.remove("show");
+  handleGenerate();
+}
+
+// If deployed on Netlify (see netlify.toml + netlify/functions/career-guidance.js), this
+// endpoint calls Claude for real, grounded in knowledge-base.md + career-taxonomy.md.
+// Opened as a local file, or deployed without the function, the fetch fails and the UI
+// falls back to the sample-data keyword matcher below — so the mockup still works standalone.
+const LIVE_GUIDANCE_ENDPOINT = "/.netlify/functions/career-guidance";
+
+async function fetchLiveGuidance(combinedText) {
+  const response = await fetch(LIVE_GUIDANCE_ENDPOINT, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ resumeText: combinedText }),
+  });
+  if (!response.ok) throw new Error(`Live guidance endpoint returned ${response.status}`);
+  const data = await response.json();
+  if (!data.guidance) throw new Error("Live guidance endpoint returned no guidance");
+  return data.guidance;
+}
+
+function liveGuidanceHtml(guidanceText) {
+  const paragraphs = guidanceText
+    .split(/\n\n+/)
+    .map(p => `<div class="bubble intro">${escapeHtml(p).replace(/\n/g, "<br>")}</div>`)
+    .join("");
+  return `${paragraphs}<div class="closing-note" style="opacity:.65">✨ Generated live by Claude, grounded in career-taxonomy.md — not sample data.</div>`;
+}
+
+async function handleGenerate() {
+  const combinedText = [resumeTextEl.value, extractedFileText, selfDescriptionEl.value].filter(Boolean).join("\n\n");
+
+  if (emptyStateEl()) emptyStateEl().remove();
+
+  addUserMessage(buildUserSummary(combinedText));
+  addTypingIndicator();
+  generateBtn.disabled = true;
+
+  let html;
+  if (!combinedText.trim()) {
+    await new Promise(r => setTimeout(r, 300));
+    html = buildAssistantHtml(combinedText);
+  } else {
+    try {
+      const guidance = await fetchLiveGuidance(combinedText);
+      html = liveGuidanceHtml(guidance);
+    } catch (error) {
+      console.warn("Live guidance endpoint unavailable, using sample-data matching instead:", error);
+      await new Promise(r => setTimeout(r, 300));
+      html = buildAssistantHtml(combinedText);
+    }
+  }
+
+  removeTypingIndicator();
+  addAssistantMessage(html);
+  generateBtn.disabled = false;
+}
+
+function emptyStateEl() { return document.getElementById("emptyState"); }
+
+function resetAll() {
+  resumeTextEl.value = "";
+  selfDescriptionEl.value = "";
+  linkedinUrlEl.value = "";
+  linkedinWarningEl.classList.remove("show");
+  cvFileEl.value = "";
+  fileStatusEl.textContent = "";
+  extractedFileText = "";
+  chatLog.innerHTML = "";
+  const el = document.createElement("div");
+  el.className = "empty-state";
+  el.id = "emptyState";
+  chatLog.appendChild(el);
+  renderEmptyState();
+}
+
+renderEmptyState();
+generateBtn.addEventListener("click", handleGenerate);
+resetBtn.addEventListener("click", resetAll);
+</script>
+
+</body>
+</html>

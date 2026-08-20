@@ -1,0 +1,8 @@
+{
+  "name": "informsav-career-guidance",
+  "private": true,
+  "description": "Netlify Function proof of concept: LLM-backed career guidance for the INFORMSAV mockup",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.120.0"
+  }
+}
