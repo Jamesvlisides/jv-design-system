@@ -1,15 +1,16 @@
 <title>JV Fieldcraft & Education Brand Guide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 
 <style>
 /* ==========================================================================
    JV BRAND SPECIFICATION — MOUNTAIN FIELDCRAFT & ALPINE EDUCATION
+   Typography: Pure Plus Jakarta Sans (Clean, Bold, High Legibility)
    ========================================================================== */
 
 :root {
-  /* Warm Alpine Linen Ground */
+  /* Warm Alpine Linen Ground (Light Mode) */
   --bg-ground: #F9F7F3;
   --bg-surface: #FFFFFF;
   --bg-surface-soft: #F2EFE9;
@@ -19,9 +20,9 @@
   --border-rule: #D5CEBF;
   --border-emphasis: #4F6A4B;
 
-  --ink-primary: #1C241E;
-  --ink-secondary: #566459;
-  --ink-muted: #839185;
+  --ink-primary: #171E19;
+  --ink-secondary: #48544B;
+  --ink-muted: #748277;
   --ink-faint: #B8C2B9;
 
   /* Olive Greens & Mountain Pastels */
@@ -29,105 +30,105 @@
   --olive-deep: #324730;
   --olive-soft: #EBF1EA;
 
-  --moss: #768F6F;
+  --moss: #6D8766;
   --moss-soft: #EEF4ED;
 
   --clay: #C2705C;
   --clay-soft: #F9EBE7;
 
-  --sky: #6B8E9E;
+  --sky: #5E8597;
   --sky-soft: #E9F1F4;
 
-  --lichen: #C29B4D;
+  --lichen: #B88E3E;
   --lichen-soft: #FBF4E6;
 
-  /* Only Two Typographic Faces */
-  --font-display: 'Newsreader', Georgia, serif;
-  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Pure Plus Jakarta Sans */
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Organic Soft Radii */
   --radius-inner: 8px;
   --radius-card: 14px;
   --radius-pill: 9999px;
 
-  --shadow-subtle: 0 1px 3px rgba(35, 45, 37, 0.05), 0 8px 24px -6px rgba(35, 45, 37, 0.06);
-  --shadow-card: 0 4px 20px -2px rgba(35, 45, 37, 0.07), 0 0 0 1px var(--border-subtle);
+  --shadow-subtle: 0 1px 3px rgba(23, 30, 25, 0.05), 0 8px 24px -6px rgba(23, 30, 25, 0.06);
+  --shadow-card: 0 4px 20px -2px rgba(23, 30, 25, 0.07), 0 0 0 1px var(--border-subtle);
 
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg-ground: #111814;
-    --bg-surface: #18221D;
-    --bg-surface-soft: #1F2B25;
-    --bg-surface-elevated: #28362F;
+    /* High-Contrast Alpine Night (Clean, not murky) */
+    --bg-ground: #131715;
+    --bg-surface: #1B211D;
+    --bg-surface-soft: #242C27;
+    --bg-surface-elevated: #2E3832;
 
-    --border-subtle: #24332B;
-    --border-rule: #33443B;
-    --border-emphasis: #8EA888;
+    --border-subtle: #2C3730;
+    --border-rule: #3D4C43;
+    --border-emphasis: #9BC797;
 
-    --ink-primary: #F2F5F2;
-    --ink-secondary: #ADC0B2;
-    --ink-muted: #7A8E80;
-    --ink-faint: #445449;
+    --ink-primary: #FFFFFF;
+    --ink-secondary: #D2DCD4;
+    --ink-muted: #95A699;
+    --ink-faint: #566459;
 
-    --olive: #7FA07B;
-    --olive-deep: #A4C1A0;
-    --olive-soft: rgba(127, 160, 123, 0.16);
+    --olive: #9BC797;
+    --olive-deep: #BBE0B8;
+    --olive-soft: rgba(155, 199, 151, 0.16);
 
-    --moss: #8FA988;
-    --moss-soft: rgba(143, 169, 136, 0.16);
+    --moss: #A9C9A5;
+    --moss-soft: rgba(169, 201, 165, 0.16);
 
-    --clay: #E08F7D;
-    --clay-soft: rgba(224, 143, 125, 0.16);
+    --clay: #F0A192;
+    --clay-soft: rgba(240, 161, 146, 0.18);
 
-    --sky: #89AFBF;
-    --sky-soft: rgba(137, 175, 191, 0.16);
+    --sky: #9DC7DC;
+    --sky-soft: rgba(157, 199, 220, 0.18);
 
-    --lichen: #DCB368;
-    --lichen-soft: rgba(220, 179, 104, 0.16);
+    --lichen: #E5C37A;
+    --lichen-soft: rgba(229, 195, 122, 0.18);
 
-    --shadow-subtle: 0 4px 16px rgba(0, 0, 0, 0.35);
-    --shadow-card: 0 12px 32px -8px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--border-subtle);
+    --shadow-subtle: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-card: 0 12px 32px -8px rgba(0, 0, 0, 0.6), 0 0 0 1px var(--border-subtle);
 
     color-scheme: dark;
   }
 }
 
 :root[data-theme="dark"] {
-  --bg-ground: #111814;
-  --bg-surface: #18221D;
-  --bg-surface-soft: #1F2B25;
-  --bg-surface-elevated: #28362F;
+  --bg-ground: #131715;
+  --bg-surface: #1B211D;
+  --bg-surface-soft: #242C27;
+  --bg-surface-elevated: #2E3832;
 
-  --border-subtle: #24332B;
-  --border-rule: #33443B;
-  --border-emphasis: #8EA888;
+  --border-subtle: #2C3730;
+  --border-rule: #3D4C43;
+  --border-emphasis: #9BC797;
 
-  --ink-primary: #F2F5F2;
-  --ink-secondary: #ADC0B2;
-  --ink-muted: #7A8E80;
-  --ink-faint: #445449;
+  --ink-primary: #FFFFFF;
+  --ink-secondary: #D2DCD4;
+  --ink-muted: #95A699;
+  --ink-faint: #566459;
 
-  --olive: #7FA07B;
-  --olive-deep: #A4C1A0;
-  --olive-soft: rgba(127, 160, 123, 0.16);
+  --olive: #9BC797;
+  --olive-deep: #BBE0B8;
+  --olive-soft: rgba(155, 199, 151, 0.16);
 
-  --moss: #8FA988;
-  --moss-soft: rgba(143, 169, 136, 0.16);
+  --moss: #A9C9A5;
+  --moss-soft: rgba(169, 201, 165, 0.16);
 
-  --clay: #E08F7D;
-  --clay-soft: rgba(224, 143, 125, 0.16);
+  --clay: #F0A192;
+  --clay-soft: rgba(240, 161, 146, 0.18);
 
-  --sky: #89AFBF;
-  --sky-soft: rgba(137, 175, 191, 0.16);
+  --sky: #9DC7DC;
+  --sky-soft: rgba(157, 199, 220, 0.18);
 
-  --lichen: #DCB368;
-  --lichen-soft: rgba(220, 179, 104, 0.16);
+  --lichen: #E5C37A;
+  --lichen-soft: rgba(229, 195, 122, 0.18);
 
-  --shadow-subtle: 0 4px 16px rgba(0, 0, 0, 0.35);
-  --shadow-card: 0 12px 32px -8px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--border-subtle);
+  --shadow-subtle: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 12px 32px -8px rgba(0, 0, 0, 0.6), 0 0 0 1px var(--border-subtle);
 
   color-scheme: dark;
 }
@@ -141,7 +142,7 @@
 body {
   background-color: var(--bg-ground);
   color: var(--ink-primary);
-  font-family: var(--font-body);
+  font-family: var(--font-family);
   line-height: 1.6;
   padding-inline: 24px;
   padding-block: 40px 88px;
@@ -170,9 +171,10 @@ body {
   align-items: center;
   gap: 8px;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--olive);
   margin-bottom: 6px;
+  letter-spacing: 0.02em;
 }
 
 .eyebrow-tag svg {
@@ -182,17 +184,14 @@ body {
 }
 
 .brand-title {
-  font-family: var(--font-display);
-  font-size: clamp(34px, 4.8vw, 52px);
-  font-weight: 500;
+  font-size: clamp(34px, 4.8vw, 50px);
+  font-weight: 800;
   line-height: 1.15;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.03em;
   color: var(--ink-primary);
 }
 
-.brand-title em {
-  font-style: italic;
-  font-weight: 400;
+.brand-title span.highlight {
   color: var(--olive);
 }
 
@@ -202,6 +201,7 @@ body {
   max-width: 580px;
   margin-top: 8px;
   line-height: 1.6;
+  font-weight: 400;
 }
 
 .theme-controls {
@@ -216,11 +216,11 @@ body {
 .theme-btn {
   border: none;
   background: transparent;
-  padding: 6px 14px;
+  padding: 7px 16px;
   border-radius: var(--radius-pill);
-  font-family: var(--font-body);
-  font-size: 12px;
-  font-weight: 600;
+  font-family: var(--font-family);
+  font-size: 12.5px;
+  font-weight: 700;
   cursor: pointer;
   color: var(--ink-secondary);
   transition: all 0.15s ease;
@@ -229,19 +229,19 @@ body {
 .theme-btn.active {
   background: var(--bg-surface);
   color: var(--ink-primary);
-  box-shadow: 0 1px 3px rgba(35, 45, 37, 0.1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Navigation */
 .nav-strip {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   border-bottom: 1px solid var(--border-subtle);
   padding-bottom: 14px;
   margin-bottom: 48px;
   overflow-x: auto;
   font-size: 13.5px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .nav-link {
@@ -265,19 +265,18 @@ body {
 
 .section-label {
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   color: var(--olive);
   margin-bottom: 6px;
 }
 
 .section-title {
-  font-family: var(--font-display);
-  font-size: 28px;
-  font-weight: 500;
+  font-size: 26px;
+  font-weight: 800;
   color: var(--ink-primary);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.025em;
 }
 
 /* Grid of Principles */
@@ -297,13 +296,11 @@ body {
 }
 
 .pillar-title {
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 17px;
+  font-weight: 800;
   color: var(--ink-primary);
+  letter-spacing: -0.02em;
   margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 
 .pillar-body {
@@ -315,12 +312,12 @@ body {
 .pillar-pill {
   display: inline-block;
   font-size: 11.5px;
-  font-weight: 600;
-  padding: 3px 10px;
+  font-weight: 700;
+  padding: 4px 11px;
   border-radius: var(--radius-pill);
   background: var(--olive-soft);
   color: var(--olive);
-  margin-top: 12px;
+  margin-top: 14px;
 }
 
 /* Side-by-Side Comparison */
@@ -348,8 +345,8 @@ body {
 
 .compare-status {
   font-size: 12px;
-  font-weight: 600;
-  padding: 4px 12px;
+  font-weight: 700;
+  padding: 5px 12px;
   border-radius: var(--radius-pill);
   width: fit-content;
 }
@@ -398,16 +395,14 @@ body {
 }
 
 .mountain-title {
-  font-family: var(--font-display);
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
   color: var(--ink-primary);
   line-height: 1.25;
 }
 
-.mountain-title em {
-  font-style: italic;
-  font-weight: 400;
+.mountain-title span.accent {
   color: var(--olive);
 }
 
@@ -419,6 +414,7 @@ body {
 
 .mountain-subtitle strong {
   color: var(--ink-primary);
+  font-weight: 700;
 }
 
 .badge-olive {
@@ -426,7 +422,7 @@ body {
   align-items: center;
   gap: 6px;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
   padding: 5px 14px;
   border-radius: var(--radius-pill);
   background: var(--olive-soft);
@@ -435,13 +431,13 @@ body {
 }
 
 .badge-dot {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: currentColor;
 }
 
-/* Metric Strip (Clean, No Robotic Monospace) */
+/* Metric Strip (Bold, High-Legibility Plus Jakarta Sans) */
 .metric-row {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr;
@@ -457,20 +453,22 @@ body {
 .metric-cell {
   background: var(--bg-surface-soft);
   border-radius: var(--radius-inner);
-  padding: 16px;
+  padding: 16px 18px;
   border: 1px solid var(--border-subtle);
 }
 
 .metric-cell.primary {
   background: var(--olive-soft);
-  border-color: rgba(79, 106, 75, 0.2);
+  border-color: rgba(79, 106, 75, 0.25);
 }
 
 .metric-caption {
   font-size: 11.5px;
-  font-weight: 600;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   color: var(--ink-secondary);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .metric-cell.primary .metric-caption {
@@ -484,20 +482,22 @@ body {
 }
 
 .metric-big {
-  font-family: var(--font-display);
-  font-size: 34px;
-  font-weight: 500;
-  line-height: 1.1;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
   color: var(--ink-primary);
 }
 
 .metric-sub {
-  font-size: 13px;
+  font-size: 13.5px;
+  font-weight: 600;
   color: var(--ink-muted);
 }
 
 .metric-note {
-  font-size: 11.5px;
+  font-size: 12px;
+  font-weight: 600;
   color: var(--ink-secondary);
   margin-top: 6px;
 }
@@ -512,19 +512,18 @@ body {
 
 .verbatim-label {
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   color: var(--olive);
   margin-bottom: 6px;
 }
 
 .verbatim-text {
-  font-family: var(--font-display);
-  font-size: 15.5px;
-  font-style: italic;
+  font-size: 14.5px;
+  font-weight: 500;
   color: var(--ink-primary);
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 /* Feedback Split Grid */
@@ -548,8 +547,8 @@ body {
 }
 
 .feedback-title {
-  font-size: 12.5px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 800;
   margin-bottom: 6px;
   display: flex;
   align-items: center;
@@ -577,6 +576,7 @@ body {
   border-top: 1px solid var(--border-subtle);
   padding-top: 14px;
   font-size: 12px;
+  font-weight: 500;
   color: var(--ink-muted);
   flex-wrap: wrap;
   gap: 8px;
@@ -609,12 +609,13 @@ body {
 
 .swatch-title {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--ink-primary);
 }
 
 .swatch-code {
   font-size: 12px;
+  font-weight: 600;
   color: var(--ink-muted);
   margin-top: 2px;
 }
@@ -647,14 +648,14 @@ body {
 
 .code-header-title {
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--ink-secondary);
 }
 
 .code-copy-btn {
-  font-family: var(--font-body);
+  font-family: var(--font-family);
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
   padding: 6px 14px;
   border-radius: var(--radius-pill);
   border: 1px solid var(--border-subtle);
@@ -702,9 +703,9 @@ pre.code-body {
         <svg viewBox="0 0 24 24"><path d="M14 6l-3.8 5.7 1.6 2.4-2.8 4.2h8l-3-12.3zM4 18.3h4.6l-2.3-3.5L4 18.3z"/></svg>
         <span>Alpine Fieldcraft & Education</span>
       </div>
-      <h1 class="brand-title">JV <em>Visual System</em> & Brand Guide</h1>
+      <h1 class="brand-title">JV <span class="highlight">Visual System</span> & Brand Guide</h1>
       <p class="brand-subtitle">
-        A calm, legible aesthetic inspired by mountain landscapes, field notebooks, and thoughtful educational technology. Built around olive greens, gentle pastels, and natural typography.
+        A calm, legible aesthetic inspired by mountain landscapes, field notebooks, and thoughtful educational technology. Built around olive greens, gentle pastels, and bold, readable typography.
       </p>
     </div>
 
@@ -720,7 +721,7 @@ pre.code-body {
     <a href="#principles" class="nav-link">Design Pillars</a>
     <a href="#comparison" class="nav-link">Evaluation Card Makeover</a>
     <a href="#palette" class="nav-link">Earth & Pastel Palette</a>
-    <a href="#typography" class="nav-link">Typography Pair</a>
+    <a href="#typography" class="nav-link">Typography Standards</a>
     <a href="#css" class="nav-link">CSS Variables</a>
   </nav>
 
@@ -728,32 +729,32 @@ pre.code-body {
   <section id="principles" style="margin-bottom: 56px;">
     <div class="section-intro">
       <div class="section-label">Core Direction</div>
-      <h2 class="section-title">Natural, Human, and Grounded</h2>
+      <h2 class="section-title">Natural, Clear, and Grounded</h2>
     </div>
 
     <div class="pillars-grid">
       <div class="pillar-card">
-        <div class="pillar-title">Calm, Two-Font Simplicity</div>
+        <div class="pillar-title">Pure Plus Jakarta Sans</div>
         <div class="pillar-body">
-          No font clutter. Just <strong>Newsreader</strong> for warm, literary headings and numerals, paired with <strong>Plus Jakarta Sans</strong> for clean, highly legible body reading.
+          Zero font fragmentation. We use <strong>Plus Jakarta Sans</strong> across all titles, metrics, and body text. Bold 800 weights give numerals strong punch and instant legibility.
         </div>
-        <span class="pillar-pill">Zero Robotic Monospace</span>
+        <span class="pillar-pill">No Serifs / No Monospace</span>
       </div>
 
       <div class="pillar-card">
-        <div class="pillar-title">Earth & Pastel Palette</div>
+        <div class="pillar-title">High-Contrast Alpine Night</div>
         <div class="pillar-body">
-          Subtle olive pine (<code>#4F6A4B</code>), moss sage, and warm linen grounds, balanced with soft pastels: terracotta clay, mountain lake sky, and lichen amber.
+          Dark mode redesigned from the ground up: crisp deep charcoal ground (<code>#131715</code>), distinct card surfaces (<code>#1B211D</code>), and pure white high-contrast text. No muddy green haze.
         </div>
-        <span class="pillar-pill">Muted & Easy on the Eyes</span>
+        <span class="pillar-pill">Effortless Dark Reading</span>
       </div>
 
       <div class="pillar-card">
-        <div class="pillar-title">Organic Soft Geometry</div>
+        <div class="pillar-title">Earth & Pastel Harmony</div>
         <div class="pillar-body">
-          Replacing harsh sharp corners and robotic technical brackets with friendly 14px soft card radii, gentle pill badges, and clean text labels.
+          Subtle alpine olive (<code>#4F6A4B</code> / <code>#9BC797</code>), sage tints, terracotta clay pastels, and mountain sky blue for clear educational tags and feedback cards.
         </div>
-        <span class="pillar-pill">Clean Educational Feel</span>
+        <span class="pillar-pill">Natural & Calming</span>
       </div>
     </div>
   </section>
@@ -813,7 +814,7 @@ pre.code-body {
           <div class="mountain-card-header">
             <div>
               <div class="section-label" style="margin-bottom: 2px;">Tippie MBA:8430 • Communication with AI</div>
-              <h3 class="mountain-title">Executive Presentation <em>Evaluation</em></h3>
+              <h3 class="mountain-title">Executive Presentation <span class="accent">Evaluation</span></h3>
               <div class="mountain-subtitle">Company: <strong>Target Corporation</strong> • Defense: <strong>Spring 2026</strong></div>
             </div>
 
@@ -836,7 +837,7 @@ pre.code-body {
             <div class="metric-cell">
               <div class="metric-caption">Organization & Flow</div>
               <div class="metric-value">
-                <span class="metric-big" style="font-size: 28px;">24.5</span>
+                <span class="metric-big" style="font-size: 30px;">24.5</span>
                 <span class="metric-sub">/ 25</span>
               </div>
               <div class="metric-note">Strong logical cadence</div>
@@ -845,7 +846,7 @@ pre.code-body {
             <div class="metric-cell">
               <div class="metric-caption">Visuals & Strategy</div>
               <div class="metric-value">
-                <span class="metric-big" style="font-size: 28px;">23.5</span>
+                <span class="metric-big" style="font-size: 30px;">23.5</span>
                 <span class="metric-sub">/ 25</span>
               </div>
               <div class="metric-note">Clear framework synthesis</div>
@@ -900,7 +901,7 @@ pre.code-body {
         <div class="swatch-fill" style="background: #4F6A4B;"></div>
         <div class="swatch-meta">
           <div class="swatch-title">Alpine Olive</div>
-          <div class="swatch-code">#4F6A4B</div>
+          <div class="swatch-code">#4F6A4B (Dark: #9BC797)</div>
           <div class="swatch-desc">Primary brand identity, key highlights, active states</div>
         </div>
       </div>
@@ -918,25 +919,25 @@ pre.code-body {
         <div class="swatch-fill" style="background: #C2705C;"></div>
         <div class="swatch-meta">
           <div class="swatch-title">Terracotta Clay</div>
-          <div class="swatch-code">#C2705C</div>
+          <div class="swatch-code">#C2705C (Dark: #F0A192)</div>
           <div class="swatch-desc">Warm pastel accent, priority callouts, refinements</div>
         </div>
       </div>
 
       <div class="swatch-box">
-        <div class="swatch-fill" style="background: #6B8E9E;"></div>
+        <div class="swatch-fill" style="background: #5E8597;"></div>
         <div class="swatch-meta">
           <div class="swatch-title">Mountain Sky</div>
-          <div class="swatch-code">#6B8E9E</div>
+          <div class="swatch-code">#5E8597 (Dark: #9DC7DC)</div>
           <div class="swatch-desc">Calm secondary pastel for educational data & tags</div>
         </div>
       </div>
 
       <div class="swatch-box">
-        <div class="swatch-fill" style="background: #C29B4D;"></div>
+        <div class="swatch-fill" style="background: #B88E3E;"></div>
         <div class="swatch-meta">
           <div class="swatch-title">Field Lichen</div>
-          <div class="swatch-code">#C29B4D</div>
+          <div class="swatch-code">#B88E3E (Dark: #E5C37A)</div>
           <div class="swatch-desc">Warm amber pastel for cautionary guidance & notes</div>
         </div>
       </div>
@@ -946,28 +947,28 @@ pre.code-body {
   <!-- SECTION 4: TYPOGRAPHY -->
   <section id="typography" style="margin-bottom: 56px;">
     <div class="section-intro">
-      <div class="section-label">Typography</div>
-      <h2 class="section-title">The Calming Two-Font Pair</h2>
+      <div class="section-label">Typography Standards</div>
+      <h2 class="section-title">Single High-Legibility Typeface</h2>
     </div>
 
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
       <div class="pillar-card">
-        <div class="section-label">Display & Numerals</div>
-        <div style="font-family: var(--font-display); font-size: 32px; font-weight: 500; color: var(--ink-primary); margin: 8px 0;">
-          Newsreader <em>Italic</em>
+        <div class="section-label">Headlines & Bold Numerals</div>
+        <div style="font-size: 38px; font-weight: 800; letter-spacing: -0.04em; color: var(--ink-primary); margin: 8px 0; line-height: 1;">
+          48.0 <span style="font-size: 20px; color: var(--olive); font-weight: 700;">Score</span>
         </div>
         <p style="font-size: 14px; color: var(--ink-secondary); line-height: 1.6;">
-          An optical literary serif with warm proportions, designed specifically for long-form reading and graceful numeric presentation.
+          Plus Jakarta Sans weight 800 with tight -0.04em tracking gives executive numerals bold presence and instant legibility across all screen sizes.
         </p>
       </div>
 
       <div class="pillar-card">
         <div class="section-label">Interface & Body Reading</div>
-        <div style="font-family: var(--font-body); font-size: 26px; font-weight: 600; color: var(--ink-primary); margin: 8px 0;">
-          Plus Jakarta Sans
+        <div style="font-size: 20px; font-weight: 600; color: var(--ink-primary); margin: 8px 0;">
+          Human, Calm & Highly Legible
         </div>
         <p style="font-size: 14px; color: var(--ink-secondary); line-height: 1.6;">
-          A clean, open geometric sans-serif that remains comfortable and friendly on both mobile and desktop screens.
+          Weights 400 to 600 handle long-form educational prose, feedback cards, and navigation chips comfortably without visual fatigue.
         </p>
       </div>
     </div>
@@ -982,7 +983,7 @@ pre.code-body {
 
     <div class="code-container">
       <div class="code-header-bar">
-        <div class="code-header-title">jv-brand.css (Olive Green & Pastel Mountain Palette)</div>
+        <div class="code-header-title">jv-brand.css (Olive Green, Pastels, Pure Plus Jakarta Sans)</div>
         <button class="code-copy-btn" id="btn-copy">Copy CSS</button>
       </div>
 
@@ -990,17 +991,27 @@ pre.code-body {
   --jv-bg-ground: #F9F7F3;
   --jv-bg-surface: #FFFFFF;
   --jv-border-subtle: #E6E1D8;
-  --jv-ink-primary: #1C241E;
-  --jv-ink-secondary: #566459;
+  --jv-ink-primary: #171E19;
+  --jv-ink-secondary: #48544B;
   --jv-olive: #4F6A4B;
   --jv-olive-soft: #EBF1EA;
   --jv-clay: #C2705C;
-  --jv-sky: #6B8E9E;
-  --jv-lichen: #C29B4D;
-  --jv-font-display: 'Newsreader', Georgia, serif;
+  --jv-sky: #5E8597;
+  --jv-lichen: #B88E3E;
   --jv-font-body: 'Plus Jakarta Sans', sans-serif;
   --jv-radius-card: 14px;
   --jv-radius-pill: 9999px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --jv-bg-ground: #131715;
+    --jv-bg-surface: #1B211D;
+    --jv-border-subtle: #2C3730;
+    --jv-ink-primary: #FFFFFF;
+    --jv-ink-secondary: #D2DCD4;
+    --jv-olive: #9BC797;
+  }
 }</code></pre>
     </div>
   </section>
