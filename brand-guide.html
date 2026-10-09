@@ -1,123 +1,136 @@
-<title>JV Studio Brand Guide</title>
+<title>JV Fieldcraft & Education Brand Guide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
 
 <style>
 /* ==========================================================================
-   JV STUDIO DESIGN SYSTEM — LIVING SPECIFICATION & TOKENS
-   Blend: Editorial Tactile (Physical & Archival) + Post-Digital Signal
+   JV BRAND SPECIFICATION — MOUNTAIN FIELDCRAFT & ALPINE EDUCATION
    ========================================================================== */
 
 :root {
-  /* Surface & Ground Tokens (Warm Alabaster / Antique Linen) */
-  --bg-ground: #F6F4EE;
+  /* Warm Alpine Linen Ground */
+  --bg-ground: #F9F7F3;
   --bg-surface: #FFFFFF;
-  --bg-surface-raised: #EFECE3;
-  --bg-surface-dim: #E8E4D9;
+  --bg-surface-soft: #F2EFE9;
+  --bg-surface-elevated: #E9E5DD;
 
-  /* Hairlines & Grid Lines */
-  --border-rule: #D8D2C5;
-  --border-subtle: #E6E1D6;
-  --border-emphasis: #23272F;
+  --border-subtle: #E6E1D8;
+  --border-rule: #D5CEBF;
+  --border-emphasis: #4F6A4B;
 
-  /* Typography Colors */
-  --ink-primary: #121418;
-  --ink-secondary: #585F6D;
-  --ink-muted: #88909D;
-  --ink-faint: #B5BAC3;
+  --ink-primary: #1C241E;
+  --ink-secondary: #566459;
+  --ink-muted: #839185;
+  --ink-faint: #B8C2B9;
 
-  /* Brand Accents — High Precision Physical Signals */
-  --accent-vermilion: #E63920;      /* Editorial vermilion seal */
-  --accent-vermilion-soft: #FDECE9;
-  --accent-amber: #D97706;          /* Brass / Amber instrument readout */
-  --accent-amber-soft: #FEF3C7;
-  --accent-alpine: #059669;         /* Field green / certified indicator */
-  --accent-alpine-soft: #D1FAE5;
-  --accent-cobalt: #1D4ED8;         /* Blueprint cobalt */
-  --accent-cobalt-soft: #DBEAFE;
+  /* Olive Greens & Mountain Pastels */
+  --olive: #4F6A4B;
+  --olive-deep: #324730;
+  --olive-soft: #EBF1EA;
 
-  /* Font Stacks */
-  --font-serif: 'Fraunces', Georgia, serif;
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --moss: #768F6F;
+  --moss-soft: #EEF4ED;
 
-  /* Geometry & Rhythm */
-  --radius-tight: 3px;
-  --radius-card: 6px;
+  --clay: #C2705C;
+  --clay-soft: #F9EBE7;
+
+  --sky: #6B8E9E;
+  --sky-soft: #E9F1F4;
+
+  --lichen: #C29B4D;
+  --lichen-soft: #FBF4E6;
+
+  /* Only Two Typographic Faces */
+  --font-display: 'Newsreader', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Organic Soft Radii */
+  --radius-inner: 8px;
+  --radius-card: 14px;
   --radius-pill: 9999px;
-  --shadow-tactile: 0 1px 2px rgba(18, 20, 24, 0.05), 0 4px 12px rgba(18, 20, 24, 0.03);
-  --shadow-float: 0 16px 36px -10px rgba(18, 20, 24, 0.12), 0 0 0 1px var(--border-rule);
+
+  --shadow-subtle: 0 1px 3px rgba(35, 45, 37, 0.05), 0 8px 24px -6px rgba(35, 45, 37, 0.06);
+  --shadow-card: 0 4px 20px -2px rgba(35, 45, 37, 0.07), 0 0 0 1px var(--border-subtle);
 
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    /* Obsidian Paper & Studio Dark */
-    --bg-ground: #0D0F12;
-    --bg-surface: #14171D;
-    --bg-surface-raised: #1C212B;
-    --bg-surface-dim: #090A0C;
+    --bg-ground: #111814;
+    --bg-surface: #18221D;
+    --bg-surface-soft: #1F2B25;
+    --bg-surface-elevated: #28362F;
 
-    --border-rule: #232934;
-    --border-subtle: #191E27;
-    --border-emphasis: #EAE6DE;
+    --border-subtle: #24332B;
+    --border-rule: #33443B;
+    --border-emphasis: #8EA888;
 
-    --ink-primary: #F3F1EC;
-    --ink-secondary: #9FA7B5;
-    --ink-muted: #646C7B;
-    --ink-faint: #3B4250;
+    --ink-primary: #F2F5F2;
+    --ink-secondary: #ADC0B2;
+    --ink-muted: #7A8E80;
+    --ink-faint: #445449;
 
-    --accent-vermilion: #FF472E;
-    --accent-vermilion-soft: rgba(255, 71, 46, 0.12);
-    --accent-amber: #F59E0B;
-    --accent-amber-soft: rgba(245, 158, 11, 0.12);
-    --accent-alpine: #10B981;
-    --accent-alpine-soft: rgba(16, 185, 129, 0.12);
-    --accent-cobalt: #3B82F6;
-    --accent-cobalt-soft: rgba(59, 130, 246, 0.12);
+    --olive: #7FA07B;
+    --olive-deep: #A4C1A0;
+    --olive-soft: rgba(127, 160, 123, 0.16);
 
-    --shadow-tactile: 0 2px 4px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.04);
-    --shadow-float: 0 20px 48px -12px rgba(0, 0, 0, 0.7), 0 0 0 1px var(--border-rule);
+    --moss: #8FA988;
+    --moss-soft: rgba(143, 169, 136, 0.16);
+
+    --clay: #E08F7D;
+    --clay-soft: rgba(224, 143, 125, 0.16);
+
+    --sky: #89AFBF;
+    --sky-soft: rgba(137, 175, 191, 0.16);
+
+    --lichen: #DCB368;
+    --lichen-soft: rgba(220, 179, 104, 0.16);
+
+    --shadow-subtle: 0 4px 16px rgba(0, 0, 0, 0.35);
+    --shadow-card: 0 12px 32px -8px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--border-subtle);
 
     color-scheme: dark;
   }
 }
 
 :root[data-theme="dark"] {
-  --bg-ground: #0D0F12;
-  --bg-surface: #14171D;
-  --bg-surface-raised: #1C212B;
-  --bg-surface-dim: #090A0C;
+  --bg-ground: #111814;
+  --bg-surface: #18221D;
+  --bg-surface-soft: #1F2B25;
+  --bg-surface-elevated: #28362F;
 
-  --border-rule: #232934;
-  --border-subtle: #191E27;
-  --border-emphasis: #EAE6DE;
+  --border-subtle: #24332B;
+  --border-rule: #33443B;
+  --border-emphasis: #8EA888;
 
-  --ink-primary: #F3F1EC;
-  --ink-secondary: #9FA7B5;
-  --ink-muted: #646C7B;
-  --ink-faint: #3B4250;
+  --ink-primary: #F2F5F2;
+  --ink-secondary: #ADC0B2;
+  --ink-muted: #7A8E80;
+  --ink-faint: #445449;
 
-  --accent-vermilion: #FF472E;
-  --accent-vermilion-soft: rgba(255, 71, 46, 0.12);
-  --accent-amber: #F59E0B;
-  --accent-amber-soft: rgba(245, 158, 11, 0.12);
-  --accent-alpine: #10B981;
-  --accent-alpine-soft: rgba(16, 185, 129, 0.12);
-  --accent-cobalt: #3B82F6;
-  --accent-cobalt-soft: rgba(59, 130, 246, 0.12);
+  --olive: #7FA07B;
+  --olive-deep: #A4C1A0;
+  --olive-soft: rgba(127, 160, 123, 0.16);
 
-  --shadow-tactile: 0 2px 4px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.04);
-  --shadow-float: 0 20px 48px -12px rgba(0, 0, 0, 0.7), 0 0 0 1px var(--border-rule);
+  --moss: #8FA988;
+  --moss-soft: rgba(143, 169, 136, 0.16);
+
+  --clay: #E08F7D;
+  --clay-soft: rgba(224, 143, 125, 0.16);
+
+  --sky: #89AFBF;
+  --sky-soft: rgba(137, 175, 191, 0.16);
+
+  --lichen: #DCB368;
+  --lichen-soft: rgba(220, 179, 104, 0.16);
+
+  --shadow-subtle: 0 4px 16px rgba(0, 0, 0, 0.35);
+  --shadow-card: 0 12px 32px -8px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--border-subtle);
 
   color-scheme: dark;
 }
-
-/* ==========================================================================
-   RESET & LAYOUT FOUNDATIONS
-   ========================================================================== */
 
 * {
   box-sizing: border-box;
@@ -128,38 +141,23 @@
 body {
   background-color: var(--bg-ground);
   color: var(--ink-primary);
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   line-height: 1.6;
   padding-inline: 24px;
-  padding-block: 32px 80px;
+  padding-block: 40px 88px;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .shell {
-  max-width: 1140px;
+  max-width: 1040px;
   margin: 0 auto;
 }
 
-/* Texture overlay: ultra subtle paper grain */
-.paper-grain {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.035;
-  background-image: radial-gradient(var(--ink-primary) 0.75px, transparent 0.75px);
-  background-size: 6px 6px;
-  z-index: 999;
-}
-
-/* ==========================================================================
-   BRAND HEADER & MANIFESTO
-   ========================================================================== */
-
+/* Header & Manifesto */
 .brand-masthead {
-  border-bottom: 2px solid var(--border-emphasis);
-  padding-bottom: 28px;
-  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 32px;
+  margin-bottom: 44px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -167,54 +165,52 @@ body {
   gap: 24px;
 }
 
-.brand-logo-lockup {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.meta-index {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--accent-vermilion);
+.eyebrow-tag {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-weight: 700;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--olive);
+  margin-bottom: 6px;
+}
+
+.eyebrow-tag svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
 }
 
 .brand-title {
-  font-family: var(--font-serif);
-  font-size: clamp(34px, 5vw, 56px);
-  font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4.8vw, 52px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
   color: var(--ink-primary);
 }
 
 .brand-title em {
   font-style: italic;
-  font-weight: 300;
-  color: var(--accent-vermilion);
-  font-family: var(--font-serif);
+  font-weight: 400;
+  color: var(--olive);
 }
 
 .brand-subtitle {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--ink-secondary);
   max-width: 580px;
-  font-weight: 400;
+  margin-top: 8px;
+  line-height: 1.6;
 }
 
 .theme-controls {
   display: flex;
-  gap: 8px;
-  background: var(--bg-surface-raised);
+  gap: 6px;
+  background: var(--bg-surface-soft);
   padding: 4px;
   border-radius: var(--radius-pill);
-  border: 1px solid var(--border-rule);
+  border: 1px solid var(--border-subtle);
 }
 
 .theme-btn {
@@ -222,10 +218,9 @@ body {
   background: transparent;
   padding: 6px 14px;
   border-radius: var(--radius-pill);
-  font-family: var(--font-mono);
-  font-size: 11px;
+  font-family: var(--font-body);
+  font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.05em;
   cursor: pointer;
   color: var(--ink-secondary);
   transition: all 0.15s ease;
@@ -234,156 +229,101 @@ body {
 .theme-btn.active {
   background: var(--bg-surface);
   color: var(--ink-primary);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(35, 45, 37, 0.1);
 }
 
-/* ==========================================================================
-   NAVIGATION JUMP STRIP
-   ========================================================================== */
-
+/* Navigation */
 .nav-strip {
   display: flex;
-  gap: 16px;
-  border-bottom: 1px solid var(--border-rule);
+  gap: 12px;
+  border-bottom: 1px solid var(--border-subtle);
   padding-bottom: 14px;
   margin-bottom: 48px;
   overflow-x: auto;
-  font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 13.5px;
+  font-weight: 500;
 }
 
 .nav-link {
-  color: var(--ink-muted);
+  color: var(--ink-secondary);
   text-decoration: none;
   white-space: nowrap;
-  padding: 4px 8px;
-  border-radius: var(--radius-tight);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
   transition: all 0.15s ease;
 }
 
 .nav-link:hover {
   color: var(--ink-primary);
-  background: var(--bg-surface-raised);
+  background: var(--bg-surface-soft);
 }
 
-/* ==========================================================================
-   PILLARS: ANATOMY OF ANTI-AI DESIGN
-   ========================================================================== */
+/* Sections */
+.section-intro {
+  margin-bottom: 24px;
+}
 
-.section-eyebrow {
-  font-family: var(--font-mono);
-  font-size: 11px;
+.section-label {
+  font-size: 12px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--ink-muted);
+  letter-spacing: 0.06em;
+  color: var(--olive);
+  margin-bottom: 6px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--ink-primary);
+  letter-spacing: -0.01em;
+}
+
+/* Grid of Principles */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 56px;
+}
+
+.pillar-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  box-shadow: var(--shadow-subtle);
+}
+
+.pillar-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink-primary);
   margin-bottom: 8px;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.section-heading {
-  font-family: var(--font-serif);
-  font-size: 28px;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-  margin-bottom: 24px;
-  color: var(--ink-primary);
-}
-
-.rules-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
-  margin-bottom: 56px;
-}
-
-.rule-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-rule);
-  border-radius: var(--radius-card);
-  padding: 24px;
-  box-shadow: var(--shadow-tactile);
-  position: relative;
-}
-
-.rule-card::before {
-  content: "⌜";
-  position: absolute;
-  top: 6px;
-  left: 8px;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  color: var(--ink-faint);
-}
-
-.rule-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 12px;
-}
-
-.rule-num {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--accent-vermilion);
-}
-
-.rule-title {
-  font-family: var(--font-sans);
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--ink-primary);
-  letter-spacing: -0.015em;
-  margin-bottom: 8px;
-}
-
-.rule-diff {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 14px;
-  font-size: 12.5px;
-}
-
-.diff-avoid {
-  background: var(--bg-surface-raised);
-  border-left: 2px solid var(--ink-muted);
-  padding: 8px 12px;
+.pillar-body {
+  font-size: 14px;
   color: var(--ink-secondary);
+  line-height: 1.6;
 }
 
-.diff-avoid strong {
-  color: var(--ink-primary);
-  display: block;
-  font-size: 11px;
-  font-family: var(--font-mono);
-  text-transform: uppercase;
-  margin-bottom: 2px;
+.pillar-pill {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--olive-soft);
+  color: var(--olive);
+  margin-top: 12px;
 }
 
-.diff-embrace {
-  background: var(--bg-surface-dim);
-  border-left: 2px solid var(--accent-vermilion);
-  padding: 8px 12px;
-  color: var(--ink-primary);
-}
-
-.diff-embrace strong {
-  color: var(--accent-vermilion);
-  display: block;
-  font-size: 11px;
-  font-family: var(--font-mono);
-  text-transform: uppercase;
-  margin-bottom: 2px;
-}
-
-/* ==========================================================================
-   INTERACTIVE COMPARISON: THE BEFORE VS AFTER
-   ========================================================================== */
-
+/* Side-by-Side Comparison */
 .comparison-section {
   margin-bottom: 64px;
 }
@@ -394,7 +334,7 @@ body {
   gap: 24px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 860px) {
   .split-compare {
     grid-template-columns: 1fr;
   }
@@ -406,537 +346,365 @@ body {
   gap: 12px;
 }
 
-.compare-badge {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: var(--radius-tight);
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+.compare-status {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
   width: fit-content;
 }
 
-.badge-cliche {
-  background: #fee2e2;
-  color: #991b1b;
-  border: 1px solid #fecaca;
+.status-prior {
+  background: #FEE2E2;
+  color: #991B1B;
 }
 
-.badge-bespoke {
-  background: var(--accent-vermilion-soft);
-  color: var(--accent-vermilion);
-  border: 1px solid var(--accent-vermilion);
+.status-current {
+  background: var(--olive-soft);
+  color: var(--olive);
 }
 
-/* The Cliché AI Card (Iowa Raw) */
-.cliche-card {
+/* Old AI Style Card */
+.prior-card {
   background: #0c1017;
-  background-image: radial-gradient(circle at 95% 5%, rgba(255,205,0,0.08) 0%, transparent 50%), radial-gradient(circle at 5% 95%, rgba(45,125,246,0.06) 0%, transparent 45%);
   border: 1px solid #1f2a3d;
   border-radius: 18px;
   padding: 24px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
   color: #f0f4fc;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.5);
 }
 
-/* The Bespoke JV Card (The New Paradigm) */
-.jv-card {
+/* The New Mountain & Education Card */
+.mountain-card {
   background: var(--bg-surface);
-  border: 1px solid var(--border-rule);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-card);
   padding: 28px;
-  box-shadow: var(--shadow-float);
+  box-shadow: var(--shadow-card);
   color: var(--ink-primary);
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* Corner registration marks */
-.jv-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent-vermilion) 0%, var(--accent-amber) 40%, transparent 100%);
-}
-
-.jv-card-topbar {
+.mountain-card-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding-bottom: 18px;
-  border-bottom: 1px solid var(--border-subtle);
-  margin-bottom: 24px;
   gap: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 18px;
   flex-wrap: wrap;
 }
 
-.jv-header-group {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.jv-title {
-  font-family: var(--font-serif);
+.mountain-title {
+  font-family: var(--font-display);
   font-size: 24px;
   font-weight: 500;
-  letter-spacing: -0.01em;
   color: var(--ink-primary);
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
-.jv-title em {
-  font-family: var(--font-serif);
+.mountain-title em {
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
+  color: var(--olive);
 }
 
-.jv-byline {
-  font-family: var(--font-mono);
-  font-size: 11.5px;
+.mountain-subtitle {
+  font-size: 13px;
   color: var(--ink-secondary);
-  letter-spacing: 0.02em;
+  margin-top: 4px;
 }
 
-.jv-byline span {
+.mountain-subtitle strong {
   color: var(--ink-primary);
-  font-weight: 600;
 }
 
-.jv-status-strip {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.jv-tag {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  padding: 5px 12px;
-  border-radius: var(--radius-pill);
-  border: 1px solid var(--border-rule);
-  background: var(--bg-surface-raised);
-  color: var(--ink-primary);
+.badge-olive {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--olive-soft);
+  color: var(--olive);
+  border: 1px solid rgba(79, 106, 75, 0.2);
 }
 
-.jv-tag.active-signal {
-  border-color: var(--accent-alpine);
-  background: var(--accent-alpine-soft);
-  color: var(--accent-alpine);
-}
-
-.jv-tag-dot {
+.badge-dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: currentColor;
 }
 
-/* Metric Instruments Grid */
-.jv-metric-grid {
+/* Metric Strip (Clean, No Robotic Monospace) */
+.metric-row {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 24px;
+  gap: 14px;
 }
 
-@media (max-width: 680px) {
-  .jv-metric-grid {
+@media (max-width: 640px) {
+  .metric-row {
     grid-template-columns: 1fr;
   }
 }
 
-.jv-metric-cell {
-  background: var(--bg-surface-raised);
+.metric-cell {
+  background: var(--bg-surface-soft);
+  border-radius: var(--radius-inner);
+  padding: 16px;
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-tight);
-  padding: 18px;
-  position: relative;
 }
 
-.jv-metric-cell.featured {
-  background: var(--bg-surface-dim);
-  border: 1px solid var(--border-rule);
+.metric-cell.primary {
+  background: var(--olive-soft);
+  border-color: rgba(79, 106, 75, 0.2);
 }
 
-.jv-metric-label {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-  margin-bottom: 8px;
-  display: flex;
-  justify-content: space-between;
+.metric-caption {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--ink-secondary);
+  margin-bottom: 4px;
 }
 
-.jv-metric-figure {
+.metric-cell.primary .metric-caption {
+  color: var(--olive);
+}
+
+.metric-value {
   display: flex;
   align-items: baseline;
-  gap: 8px;
-  margin-bottom: 6px;
-}
-
-.jv-numeral {
-  font-family: var(--font-serif);
-  font-size: 40px;
-  font-weight: 300;
-  line-height: 1;
-  color: var(--ink-primary);
-  font-variant-numeric: tabular-nums;
-}
-
-.jv-denominator {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  color: var(--ink-muted);
-}
-
-.jv-meter-track {
-  width: 100%;
-  height: 4px;
-  background: var(--border-rule);
-  border-radius: 2px;
-  overflow: hidden;
-  margin-top: 10px;
-}
-
-.jv-meter-fill {
-  height: 100%;
-  background: var(--accent-vermilion);
-  border-radius: 2px;
-}
-
-/* Verbatim Quote: Editorial Blockquote */
-.jv-verbatim-card {
-  border-left: 3px solid var(--accent-vermilion);
-  background: var(--bg-surface-raised);
-  padding: 16px 20px;
-  margin-bottom: 20px;
-  border-radius: 0 var(--radius-tight) var(--radius-tight) 0;
-}
-
-.jv-verbatim-eyebrow {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--accent-vermilion);
-  font-weight: 700;
-  margin-bottom: 6px;
-}
-
-.jv-quote-text {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 15px;
-  line-height: 1.5;
-  color: var(--ink-primary);
-}
-
-/* Two-column analysis cards */
-.jv-analysis-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 24px;
-}
-
-@media (max-width: 600px) {
-  .jv-analysis-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.jv-analysis-pane {
-  border: 1px solid var(--border-subtle);
-  background: var(--bg-surface);
-  border-radius: var(--radius-tight);
-  padding: 16px;
-}
-
-.jv-pane-header {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.pane-positive {
-  color: var(--accent-alpine);
-}
-
-.pane-refinement {
-  color: var(--accent-amber);
-}
-
-.jv-pane-body {
-  font-size: 13px;
-  color: var(--ink-secondary);
-  line-height: 1.5;
-}
-
-.jv-card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 16px;
-  border-top: 1px solid var(--border-subtle);
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--ink-muted);
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-/* ==========================================================================
-   TYPOGRAPHY SPECIMEN SHEET
-   ========================================================================== */
-
-.specimen-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
-  margin-bottom: 56px;
-}
-
-.specimen-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-rule);
-  border-radius: var(--radius-card);
-  padding: 28px;
-  box-shadow: var(--shadow-tactile);
-}
-
-.specimen-role {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--accent-vermilion);
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.specimen-sample {
-  margin-bottom: 14px;
-  color: var(--ink-primary);
-}
-
-.serif-display {
-  font-family: var(--font-serif);
-  font-size: 38px;
-  font-weight: 300;
-  line-height: 1.1;
-}
-
-.serif-display em {
-  font-style: italic;
-  font-weight: 300;
-  color: var(--accent-vermilion);
-}
-
-.sans-headline {
-  font-family: var(--font-sans);
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.2;
-}
-
-.mono-readout {
-  font-family: var(--font-mono);
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  line-height: 1.6;
-}
-
-.specimen-meta {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--ink-secondary);
-  border-top: 1px solid var(--border-subtle);
-  padding-top: 12px;
-  display: flex;
-  flex-direction: column;
   gap: 4px;
 }
 
-/* ==========================================================================
-   COLOR ARCHITECTURE & PHYSICAL SWATCHES
-   ========================================================================== */
+.metric-big {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--ink-primary);
+}
 
-.swatches-strip {
+.metric-sub {
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+
+.metric-note {
+  font-size: 11.5px;
+  color: var(--ink-secondary);
+  margin-top: 6px;
+}
+
+/* Verbatim Quote Block */
+.verbatim-block {
+  border-left: 3px solid var(--olive);
+  background: var(--bg-surface-soft);
+  padding: 16px 20px;
+  border-radius: 0 var(--radius-inner) var(--radius-inner) 0;
+}
+
+.verbatim-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--olive);
+  margin-bottom: 6px;
+}
+
+.verbatim-text {
+  font-family: var(--font-display);
+  font-size: 15.5px;
+  font-style: italic;
+  color: var(--ink-primary);
+  line-height: 1.55;
+}
+
+/* Feedback Split Grid */
+.feedback-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+@media (max-width: 580px) {
+  .feedback-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feedback-card {
+  padding: 16px;
+  border-radius: var(--radius-inner);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+}
+
+.feedback-title {
+  font-size: 12.5px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.feedback-title.olive {
+  color: var(--olive);
+}
+
+.feedback-title.clay {
+  color: var(--clay);
+}
+
+.feedback-text {
+  font-size: 13px;
+  color: var(--ink-secondary);
+  line-height: 1.55;
+}
+
+.mountain-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 14px;
+  font-size: 12px;
+  color: var(--ink-muted);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Color Palette Swatches */
+.swatches-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 16px;
   margin-bottom: 56px;
 }
 
-.swatch-card {
+.swatch-box {
   background: var(--bg-surface);
-  border: 1px solid var(--border-rule);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-card);
   overflow: hidden;
-  box-shadow: var(--shadow-tactile);
+  box-shadow: var(--shadow-subtle);
 }
 
-.swatch-color {
+.swatch-fill {
   height: 80px;
   width: 100%;
 }
 
-.swatch-info {
+.swatch-meta {
   padding: 14px;
 }
 
-.swatch-name {
-  font-family: var(--font-sans);
-  font-size: 13px;
+.swatch-title {
+  font-size: 14px;
   font-weight: 700;
   color: var(--ink-primary);
-  margin-bottom: 2px;
 }
 
-.swatch-hex {
-  font-family: var(--font-mono);
-  font-size: 11px;
+.swatch-code {
+  font-size: 12px;
   color: var(--ink-muted);
+  margin-top: 2px;
 }
 
-.swatch-role {
-  font-size: 11px;
+.swatch-desc {
+  font-size: 12px;
   color: var(--ink-secondary);
   margin-top: 6px;
+  line-height: 1.45;
 }
 
-/* ==========================================================================
-   CODE EXPORT TABS & COPY SYSTEM
-   ========================================================================== */
-
-.code-export-box {
+/* Code Snippet Box */
+.code-container {
   background: var(--bg-surface);
-  border: 1px solid var(--border-rule);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-card);
-  box-shadow: var(--shadow-float);
+  box-shadow: var(--shadow-subtle);
   overflow: hidden;
-  margin-bottom: 64px;
+  margin-bottom: 48px;
 }
 
-.code-header {
-  background: var(--bg-surface-raised);
+.code-header-bar {
+  background: var(--bg-surface-soft);
   padding: 12px 20px;
-  border-bottom: 1px solid var(--border-rule);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
-.code-tabs {
-  display: flex;
-  gap: 8px;
-}
-
-.code-tab-btn {
-  background: transparent;
-  border: none;
-  font-family: var(--font-mono);
-  font-size: 12px;
+.code-header-title {
+  font-size: 13px;
   font-weight: 600;
   color: var(--ink-secondary);
-  padding: 6px 12px;
-  border-radius: var(--radius-tight);
-  cursor: pointer;
 }
 
-.code-tab-btn.active {
-  background: var(--bg-surface);
-  color: var(--accent-vermilion);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
-}
-
-.copy-btn {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--ink-primary);
-  background: var(--bg-surface);
-  border: 1px solid var(--border-rule);
+.code-copy-btn {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
   padding: 6px 14px;
   border-radius: var(--radius-pill);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  color: var(--ink-primary);
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
   transition: all 0.15s ease;
 }
 
-.copy-btn:hover {
-  border-color: var(--accent-vermilion);
-  color: var(--accent-vermilion);
+.code-copy-btn:hover {
+  background: var(--olive-soft);
+  color: var(--olive);
+  border-color: rgba(79, 106, 75, 0.3);
 }
 
-pre.code-block {
+pre.code-body {
   padding: 24px;
   overflow-x: auto;
-  font-family: var(--font-mono);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: 12.5px;
   line-height: 1.6;
   color: var(--ink-primary);
-  background: var(--bg-surface);
 }
 
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
-
-.brand-footer {
-  border-top: 1px solid var(--border-rule);
+/* Footer */
+.footer-bar {
+  border-top: 1px solid var(--border-subtle);
   padding-top: 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   color: var(--ink-muted);
   flex-wrap: wrap;
   gap: 12px;
 }
 </style>
 
-<div class="paper-grain"></div>
-
 <div class="shell">
 
   <!-- MASTHEAD -->
   <header class="brand-masthead">
-    <div class="brand-logo-lockup">
-      <div class="meta-index">[ SPECIFICATION 01.0 // 2026 ]</div>
-      <h1 class="brand-title">JV <em>Visual Identity</em> & Brand System</h1>
+    <div>
+      <div class="eyebrow-tag">
+        <svg viewBox="0 0 24 24"><path d="M14 6l-3.8 5.7 1.6 2.4-2.8 4.2h8l-3-12.3zM4 18.3h4.6l-2.3-3.5L4 18.3z"/></svg>
+        <span>Alpine Fieldcraft & Education</span>
+      </div>
+      <h1 class="brand-title">JV <em>Visual System</em> & Brand Guide</h1>
       <p class="brand-subtitle">
-        A bespoke design vocabulary blending tactile editorial craftsmanship with post-digital instrument precision. Built to replace generic generative aesthetics.
+        A calm, legible aesthetic inspired by mountain landscapes, field notebooks, and thoughtful educational technology. Built around olive greens, gentle pastels, and natural typography.
       </p>
     </div>
 
@@ -947,498 +715,337 @@ pre.code-block {
     </div>
   </header>
 
-  <!-- NAVIGATION STRIP -->
+  <!-- NAVIGATION -->
   <nav class="nav-strip">
-    <a href="#principles" class="nav-link">[ 01 Principles ]</a>
-    <a href="#comparison" class="nav-link">[ 02 The Makeover ]</a>
-    <a href="#typography" class="nav-link">[ 03 Typography ]</a>
-    <a href="#palette" class="nav-link">[ 04 Color System ]</a>
-    <a href="#tokens" class="nav-link">[ 05 Drop-in CSS ]</a>
+    <a href="#principles" class="nav-link">Design Pillars</a>
+    <a href="#comparison" class="nav-link">Evaluation Card Makeover</a>
+    <a href="#palette" class="nav-link">Earth & Pastel Palette</a>
+    <a href="#typography" class="nav-link">Typography Pair</a>
+    <a href="#css" class="nav-link">CSS Variables</a>
   </nav>
 
-  <!-- SECTION 1: ANTI-AI DESIGN RULES -->
-  <section id="principles" style="margin-bottom: 60px;">
-    <div class="section-eyebrow">[ CORE PILLARS ]</div>
-    <h2 class="section-heading">How We Purge the "Claude-Code" Signature</h2>
+  <!-- SECTION 1: PILLARS -->
+  <section id="principles" style="margin-bottom: 56px;">
+    <div class="section-intro">
+      <div class="section-label">Core Direction</div>
+      <h2 class="section-title">Natural, Human, and Grounded</h2>
+    </div>
 
-    <div class="rules-grid">
-      <div class="rule-card">
-        <div class="rule-header">
-          <span class="rule-num">[ 01 // TYPOGRAPHY ]</span>
-          <span style="font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted);">OPTICAL SCALE</span>
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-title">Calm, Two-Font Simplicity</div>
+        <div class="pillar-body">
+          No font clutter. Just <strong>Newsreader</strong> for warm, literary headings and numerals, paired with <strong>Plus Jakarta Sans</strong> for clean, highly legible body reading.
         </div>
-        <div class="rule-title">Human Editorial vs Standard SaaS Sans</div>
-        <div class="rule-diff">
-          <div class="diff-avoid">
-            <strong>The AI Cliché</strong>
-            Defaulting to Inter, Manrope, or Plus Jakarta Sans at standard weights without expressiveness or contrast.
-          </div>
-          <div class="diff-embrace">
-            <strong>The JV Standard</strong>
-            <em>Fraunces</em> optical serif (warm ink traps & fluid italic accents) paired with tightly-tracked geometric grotesque and clean monospaced indexers.
-          </div>
-        </div>
+        <span class="pillar-pill">Zero Robotic Monospace</span>
       </div>
 
-      <div class="rule-card">
-        <div class="rule-header">
-          <span class="rule-num">[ 02 // GEOMETRY ]</span>
-          <span style="font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted);">CORNER ARCHITECTURE</span>
+      <div class="pillar-card">
+        <div class="pillar-title">Earth & Pastel Palette</div>
+        <div class="pillar-body">
+          Subtle olive pine (<code>#4F6A4B</code>), moss sage, and warm linen grounds, balanced with soft pastels: terracotta clay, mountain lake sky, and lichen amber.
         </div>
-        <div class="rule-title">Architectural Flush Cards & Soft Control Pills</div>
-        <div class="rule-diff">
-          <div class="diff-avoid">
-            <strong>The AI Cliché</strong>
-            Universal 14px–18px rounded corners on every container, softening the interface into an amorphous bubble.
-          </div>
-          <div class="diff-embrace">
-            <strong>The JV Standard</strong>
-            Structural containers feature crisp 4px–6px architectural corners with fine hairline borders. Only floating interactive controls use pill radii.
-          </div>
-        </div>
+        <span class="pillar-pill">Muted & Easy on the Eyes</span>
       </div>
 
-      <div class="rule-card">
-        <div class="rule-header">
-          <span class="rule-num">[ 03 // GLYPHS & ICONOGRAPHY ]</span>
-          <span style="font-family: var(--font-mono); font-size: 10px; color: var(--ink-muted);">INDEXING SYSTEM</span>
+      <div class="pillar-card">
+        <div class="pillar-title">Organic Soft Geometry</div>
+        <div class="pillar-body">
+          Replacing harsh sharp corners and robotic technical brackets with friendly 14px soft card radii, gentle pill badges, and clean text labels.
         </div>
-        <div class="rule-title">Instrument Notations vs Emojis in Boxes</div>
-        <div class="rule-diff">
-          <div class="diff-avoid">
-            <strong>The AI Cliché</strong>
-            Placing emojis (🦅, 🏆, 📊, 🤖, ✨) inside rounded square boxes as pseudo-icons.
-          </div>
-          <div class="diff-embrace">
-            <strong>The JV Standard</strong>
-            Bracketed coordinate markers (<code>[ 01 ]</code>, <code>[ REC ]</code>, <code>§ 4.2</code>), status signal dots, and bespoke hairline SVG meters.
-          </div>
-        </div>
+        <span class="pillar-pill">Clean Educational Feel</span>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 2: LIVE CARD TRANSFORMATION (BEFORE VS AFTER) -->
+  <!-- SECTION 2: SIDE-BY-SIDE CARD COMPARISON -->
   <section id="comparison" class="comparison-section">
-    <div class="section-eyebrow">[ SIDE-BY-SIDE TRANSFORMATION ]</div>
-    <h2 class="section-heading">Executive Presentation Card: Before vs After</h2>
+    <div class="section-intro">
+      <div class="section-label">Real-World Transformation</div>
+      <h2 class="section-title">The Evaluation Card, Redesigned</h2>
+    </div>
 
     <div class="split-compare">
       <!-- BEFORE -->
       <div class="compare-col">
-        <div class="compare-badge badge-cliche">
-          <span>✕</span> The "Claude Code" Default
+        <div class="compare-status status-prior">
+          ✕ Previous AI Dark-Slate Card
         </div>
 
-        <div class="cliche-card">
-          <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #1a2436; padding-bottom:14px; margin-bottom:16px;">
-            <div style="display:flex; align-items:center; gap:12px;">
-              <div style="width:42px; height:42px; border-radius:12px; background:linear-gradient(135deg, #FFCD00 0%, #B8860B 100%); display:flex; align-items:center; justify-content:center; font-size:20px;">🦅</div>
+        <div class="prior-card">
+          <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #1a2436; padding-bottom:12px; margin-bottom:14px;">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="width:38px; height:38px; border-radius:10px; background:#FFCD00; display:flex; align-items:center; justify-content:center; font-size:18px;">🦅</div>
               <div>
-                <div style="font-size:16px; font-weight:800; color:#fff;">Executive Evaluation</div>
-                <div style="font-size:11px; color:#8ea1c0;">Tippie MBA:8430 • <span style="color:#FFCD00;">Target Corp</span></div>
+                <div style="font-size:15px; font-weight:800; color:#fff;">Executive Evaluation</div>
+                <div style="font-size:11px; color:#8ea1c0;">Tippie MBA:8430 • Target Corp</div>
               </div>
             </div>
-            <div style="background:#121824; border:1px solid #222f46; padding:5px 12px; border-radius:999px; font-size:11px; font-weight:700; color:#10B981;">
+            <div style="background:#121824; border:1px solid #222f46; padding:4px 10px; border-radius:999px; font-size:11px; color:#10B981;">
               ● Exemplary (48/50)
             </div>
           </div>
 
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:16px;">
-            <div style="background:#121927; border:1px solid #1f2b3e; border-radius:12px; padding:12px;">
-              <div style="font-size:10px; text-transform:uppercase; color:#FFCD00; font-weight:700;">Score 🏆</div>
-              <div style="font-size:28px; font-weight:800; color:#fff; font-family:monospace;">48 <span style="font-size:14px; color:#6b7f9e;">/50</span></div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:14px;">
+            <div style="background:#121927; border:1px solid #1f2b3e; border-radius:10px; padding:10px;">
+              <div style="font-size:10px; text-transform:uppercase; color:#FFCD00;">Total Score 🏆</div>
+              <div style="font-size:26px; font-weight:800; color:#fff; font-family:monospace;">48 / 50</div>
             </div>
-            <div style="background:#121927; border:1px solid #1f2b3e; border-radius:12px; padding:12px;">
-              <div style="font-size:10px; text-transform:uppercase; color:#8ea1c0; font-weight:700;">Strategy 🤖</div>
-              <div style="font-size:24px; font-weight:800; color:#fff; font-family:monospace;">24 <span style="font-size:14px; color:#6b7f9e;">/25</span></div>
+            <div style="background:#121927; border:1px solid #1f2b3e; border-radius:10px; padding:10px;">
+              <div style="font-size:10px; text-transform:uppercase; color:#8ea1c0;">AI Strategy 🤖</div>
+              <div style="font-size:24px; font-weight:800; color:#fff; font-family:monospace;">24 / 25</div>
             </div>
           </div>
 
-          <div style="background:#101623; border-left:4px solid #FFCD00; padding:12px; border-radius:8px; font-size:12px; font-style:italic;">
-            "We optimized fulfillment by shifting high-frequency items to automated micro-hubs..."
+          <div style="background:#101623; border-left:3px solid #FFCD00; padding:10px; border-radius:6px; font-size:12px; font-style:italic;">
+            "We optimized fulfillment by shifting high-frequency items..."
           </div>
         </div>
       </div>
 
       <!-- AFTER -->
       <div class="compare-col">
-        <div class="compare-badge badge-bespoke">
-          <span>✓</span> JV Bespoke Editorial Identity
+        <div class="compare-status status-current">
+          ✓ JV Mountain & Education Style
         </div>
 
-        <div class="jv-card">
-          <div class="jv-card-topbar">
-            <div class="jv-header-group">
-              <div class="section-eyebrow" style="margin-bottom: 2px;">[ EVALUATION DOSSIER // MBA:8430 ]</div>
-              <h3 class="jv-title">Executive Presentation <em>Analysis</em></h3>
-              <div class="jv-byline">Organization: <span>Target Corporation</span> • Defense: <span>Spring 2026</span></div>
+        <div class="mountain-card">
+          <div class="mountain-card-header">
+            <div>
+              <div class="section-label" style="margin-bottom: 2px;">Tippie MBA:8430 • Communication with AI</div>
+              <h3 class="mountain-title">Executive Presentation <em>Evaluation</em></h3>
+              <div class="mountain-subtitle">Company: <strong>Target Corporation</strong> • Defense: <strong>Spring 2026</strong></div>
             </div>
 
-            <div class="jv-status-strip">
-              <div class="jv-tag active-signal">
-                <span class="jv-tag-dot"></span>
-                <span>Exemplary Band</span>
-              </div>
-              <div class="jv-tag">
-                <span>08:42 Rec</span>
-              </div>
+            <div class="badge-olive">
+              <span class="badge-dot"></span>
+              <span>Exemplary Band</span>
             </div>
           </div>
 
-          <div class="jv-metric-grid">
-            <div class="jv-metric-cell featured">
-              <div class="jv-metric-label">
-                <span>COMPOSITE INDEX</span>
-                <span>[ 01 ]</span>
+          <div class="metric-row">
+            <div class="metric-cell primary">
+              <div class="metric-caption">Composite Score</div>
+              <div class="metric-value">
+                <span class="metric-big">48.0</span>
+                <span class="metric-sub">/ 50 pts</span>
               </div>
-              <div class="jv-metric-figure">
-                <span class="jv-numeral">48.0</span>
-                <span class="jv-denominator">/ 50.0</span>
-              </div>
-              <div style="font-family: var(--font-mono); font-size: 11px; color: var(--accent-alpine); font-weight: 600;">
-                Scaled: 96% Precision
-              </div>
-              <div class="jv-meter-track">
-                <div class="jv-meter-fill" style="width: 96%;"></div>
-              </div>
+              <div class="metric-note">Scaled: 96% Mastery</div>
             </div>
 
-            <div class="jv-metric-cell">
-              <div class="jv-metric-label">
-                <span>ORGANIZATION</span>
-                <span>[ 02 ]</span>
+            <div class="metric-cell">
+              <div class="metric-caption">Organization & Flow</div>
+              <div class="metric-value">
+                <span class="metric-big" style="font-size: 28px;">24.5</span>
+                <span class="metric-sub">/ 25</span>
               </div>
-              <div class="jv-metric-figure">
-                <span class="jv-numeral" style="font-size: 32px;">24.5</span>
-                <span class="jv-denominator">/ 25</span>
-              </div>
-              <div style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-secondary);">
-                Structural Coherence
-              </div>
-              <div class="jv-meter-track">
-                <div class="jv-meter-fill" style="width: 98%; background: var(--accent-amber);"></div>
-              </div>
+              <div class="metric-note">Strong logical cadence</div>
             </div>
 
-            <div class="jv-metric-cell">
-              <div class="jv-metric-label">
-                <span>AI & STRATEGY</span>
-                <span>[ 03 ]</span>
+            <div class="metric-cell">
+              <div class="metric-caption">Visuals & Strategy</div>
+              <div class="metric-value">
+                <span class="metric-big" style="font-size: 28px;">23.5</span>
+                <span class="metric-sub">/ 25</span>
               </div>
-              <div class="jv-metric-figure">
-                <span class="jv-numeral" style="font-size: 32px;">23.5</span>
-                <span class="jv-denominator">/ 25</span>
-              </div>
-              <div style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-secondary);">
-                Framework Synthesis
-              </div>
-              <div class="jv-meter-track">
-                <div class="jv-meter-fill" style="width: 94%; background: var(--accent-cobalt);"></div>
-              </div>
+              <div class="metric-note">Clear framework synthesis</div>
             </div>
           </div>
 
-          <div class="jv-verbatim-card">
-            <div class="jv-verbatim-eyebrow">[ VERBATIM EXECUTIVE ANCHOR ]</div>
-            <div class="jv-quote-text">
+          <div class="verbatim-block">
+            <div class="verbatim-label">Anchor Quote</div>
+            <div class="verbatim-text">
               “We optimized last-mile fulfillment economics by shifting high-frequency consumables directly into automated micro-hubs before regional wave routing.”
             </div>
           </div>
 
-          <div class="jv-analysis-grid">
-            <div class="jv-analysis-pane">
-              <div class="jv-pane-header pane-positive">
-                <span>✦</span> [ VERIFIED STRENGTHS ]
+          <div class="feedback-grid">
+            <div class="feedback-card">
+              <div class="feedback-title olive">
+                <span>✦</span> Verified Strengths
               </div>
-              <div class="jv-pane-body">
+              <div class="feedback-text">
                 Defended supply-chain trade-offs under probing interrogation; anchored cost calculations in live inventory velocity.
               </div>
             </div>
 
-            <div class="jv-analysis-pane">
-              <div class="jv-pane-header pane-refinement">
-                <span>▲</span> [ PRIORITY REFINEMENT ]
+            <div class="feedback-card">
+              <div class="feedback-title clay">
+                <span>▲</span> Priority Refinement
               </div>
-              <div class="jv-pane-body">
+              <div class="feedback-text">
                 Align slide 14 visual telemetry with the executive summary ROI timeline before board submission.
               </div>
             </div>
           </div>
 
-          <div class="jv-card-footer">
-            <div>Tippie College of Business • Conversational Intelligence Engine</div>
-            <div>Auth Token: <code>#JV-TI-8430-EX</code></div>
+          <div class="mountain-card-footer">
+            <div>University of Iowa Tippie College of Business</div>
+            <div>Evaluated via Kaltura Conversational Intelligence</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 3: TYPOGRAPHY SPECIMEN -->
-  <section id="typography" style="margin-bottom: 64px;">
-    <div class="section-eyebrow">[ TYPOGRAPHIC BLUEPRINT ]</div>
-    <h2 class="section-heading">Font Roles & Optical Calibration</h2>
+  <!-- SECTION 3: PALETTE -->
+  <section id="palette" style="margin-bottom: 56px;">
+    <div class="section-intro">
+      <div class="section-label">Chromatic Palette</div>
+      <h2 class="section-title">Mountain Earth & Soft Pastels</h2>
+    </div>
 
-    <div class="specimen-grid">
-      <div class="specimen-card">
-        <div class="specimen-role">[ EDITORIAL HEADLINE // FRAUNCES ]</div>
-        <div class="specimen-sample serif-display">
-          Authentic <em>Intelligence</em> & Human Expression.
-        </div>
-        <div class="specimen-meta">
-          <span>Family: Fraunces (Variable Optical Size 9-144)</span>
-          <span>Role: High-impact titles, quotes, numerals</span>
-          <span>Treatment: Warm ink traps, light italic emphasis</span>
+    <div class="swatches-grid">
+      <div class="swatch-box">
+        <div class="swatch-fill" style="background: #4F6A4B;"></div>
+        <div class="swatch-meta">
+          <div class="swatch-title">Alpine Olive</div>
+          <div class="swatch-code">#4F6A4B</div>
+          <div class="swatch-desc">Primary brand identity, key highlights, active states</div>
         </div>
       </div>
 
-      <div class="specimen-card">
-        <div class="specimen-role">[ STRUCTURAL SANS // PLUS JAKARTA ]</div>
-        <div class="specimen-sample sans-headline">
-          High-Velocity Conversational Systems Architecture
-        </div>
-        <div class="specimen-meta">
-          <span>Family: Plus Jakarta Sans (500, 600, 700)</span>
-          <span>Role: Navigation, section leads, clean body text</span>
-          <span>Treatment: Tight tracking (-0.02em to -0.035em)</span>
+      <div class="swatch-box">
+        <div class="swatch-fill" style="background: #EBF1EA; border-bottom: 1px solid var(--border-subtle);"></div>
+        <div class="swatch-meta">
+          <div class="swatch-title">Pastel Sage Tint</div>
+          <div class="swatch-code">#EBF1EA</div>
+          <div class="swatch-desc">Pill backgrounds, active cards, soft container fills</div>
         </div>
       </div>
 
-      <div class="specimen-card">
-        <div class="specimen-role">[ PRECISION MONOSPACE // JETBRAINS MONO ]</div>
-        <div class="specimen-sample mono-readout">
-          INDEX: 0x48F // LATENCY: 22ms<br>
-          BAND: [ EXEMPLARY_CLASS ]
+      <div class="swatch-box">
+        <div class="swatch-fill" style="background: #C2705C;"></div>
+        <div class="swatch-meta">
+          <div class="swatch-title">Terracotta Clay</div>
+          <div class="swatch-code">#C2705C</div>
+          <div class="swatch-desc">Warm pastel accent, priority callouts, refinements</div>
         </div>
-        <div class="specimen-meta">
-          <span>Family: JetBrains Mono (400, 500, 700)</span>
-          <span>Role: Metadata indices, telemetry, tabular figures</span>
-          <span>Treatment: Bracketed tags, uppercase + 0.1em spacing</span>
+      </div>
+
+      <div class="swatch-box">
+        <div class="swatch-fill" style="background: #6B8E9E;"></div>
+        <div class="swatch-meta">
+          <div class="swatch-title">Mountain Sky</div>
+          <div class="swatch-code">#6B8E9E</div>
+          <div class="swatch-desc">Calm secondary pastel for educational data & tags</div>
+        </div>
+      </div>
+
+      <div class="swatch-box">
+        <div class="swatch-fill" style="background: #C29B4D;"></div>
+        <div class="swatch-meta">
+          <div class="swatch-title">Field Lichen</div>
+          <div class="swatch-code">#C29B4D</div>
+          <div class="swatch-desc">Warm amber pastel for cautionary guidance & notes</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 4: COLOR ARCHITECTURE -->
-  <section id="palette" style="margin-bottom: 64px;">
-    <div class="section-eyebrow">[ CHROMATIC FOUNDATION ]</div>
-    <h2 class="section-heading">Physical Materials & Signal Accents</h2>
+  <!-- SECTION 4: TYPOGRAPHY -->
+  <section id="typography" style="margin-bottom: 56px;">
+    <div class="section-intro">
+      <div class="section-label">Typography</div>
+      <h2 class="section-title">The Calming Two-Font Pair</h2>
+    </div>
 
-    <div class="swatches-strip">
-      <div class="swatch-card">
-        <div class="swatch-color" style="background: #0D0F12; border-bottom: 1px solid var(--border-rule);"></div>
-        <div class="swatch-info">
-          <div class="swatch-name">Obsidian Charcoal</div>
-          <div class="swatch-hex">#0D0F12 / #F6F4EE</div>
-          <div class="swatch-role">Deep physical canvas with subtle warm tint</div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+      <div class="pillar-card">
+        <div class="section-label">Display & Numerals</div>
+        <div style="font-family: var(--font-display); font-size: 32px; font-weight: 500; color: var(--ink-primary); margin: 8px 0;">
+          Newsreader <em>Italic</em>
         </div>
+        <p style="font-size: 14px; color: var(--ink-secondary); line-height: 1.6;">
+          An optical literary serif with warm proportions, designed specifically for long-form reading and graceful numeric presentation.
+        </p>
       </div>
 
-      <div class="swatch-card">
-        <div class="swatch-color" style="background: #E63920;"></div>
-        <div class="swatch-info">
-          <div class="swatch-name">Vermilion Stamp</div>
-          <div class="swatch-hex">#E63920</div>
-          <div class="swatch-role">Editorial focal point, seal mark, critical focus</div>
+      <div class="pillar-card">
+        <div class="section-label">Interface & Body Reading</div>
+        <div style="font-family: var(--font-body); font-size: 26px; font-weight: 600; color: var(--ink-primary); margin: 8px 0;">
+          Plus Jakarta Sans
         </div>
-      </div>
-
-      <div class="swatch-card">
-        <div class="swatch-color" style="background: #D97706;"></div>
-        <div class="swatch-info">
-          <div class="swatch-name">Instrument Amber</div>
-          <div class="swatch-hex">#D97706 / #F59E0B</div>
-          <div class="swatch-role">Telemetry meters, cautionary thresholds</div>
-        </div>
-      </div>
-
-      <div class="swatch-color-card swatch-card">
-        <div class="swatch-color" style="background: #059669;"></div>
-        <div class="swatch-info">
-          <div class="swatch-name">Certified Alpine</div>
-          <div class="swatch-hex">#059669 / #10B981</div>
-          <div class="swatch-role">Verified state, rubric mastery, healthy signals</div>
-        </div>
-      </div>
-
-      <div class="swatch-card">
-        <div class="swatch-color" style="background: #1D4ED8;"></div>
-        <div class="swatch-info">
-          <div class="swatch-name">Cobalt Blueprint</div>
-          <div class="swatch-hex">#1D4ED8 / #3B82F6</div>
-          <div class="swatch-role">Technical metadata, system link structures</div>
-        </div>
+        <p style="font-size: 14px; color: var(--ink-secondary); line-height: 1.6;">
+          A clean, open geometric sans-serif that remains comfortable and friendly on both mobile and desktop screens.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 5: READY-TO-USE CODE EXPORTS -->
-  <section id="tokens" style="margin-bottom: 40px;">
-    <div class="section-eyebrow">[ DROP-IN TOKENS ]</div>
-    <h2 class="section-heading">Copy & Paste Code for Your Future Pages</h2>
+  <!-- SECTION 5: READY-TO-USE CODE -->
+  <section id="css" style="margin-bottom: 40px;">
+    <div class="section-intro">
+      <div class="section-label">Developer Asset</div>
+      <h2 class="section-title">Drop-in CSS Variables</h2>
+    </div>
 
-    <div class="code-export-box">
-      <div class="code-header">
-        <div class="code-tabs">
-          <button class="code-tab-btn active" id="tab-css-btn">jv-tokens.css</button>
-          <button class="code-tab-btn" id="tab-card-btn">jv-card-template.html</button>
-        </div>
-        <button class="copy-btn" id="btn-copy-code">
-          <span>⎘</span> Copy Snippet
-        </button>
+    <div class="code-container">
+      <div class="code-header-bar">
+        <div class="code-header-title">jv-brand.css (Olive Green & Pastel Mountain Palette)</div>
+        <button class="code-copy-btn" id="btn-copy">Copy CSS</button>
       </div>
 
-      <pre class="code-block" id="code-snippet-display"><code>/* === JV STUDIO BASE TOKENS (LIGHT + DARK READY) === */
-:root {
-  --bg-ground: #F6F4EE;
-  --bg-surface: #FFFFFF;
-  --bg-surface-raised: #EFECE3;
-  --border-rule: #D8D2C5;
-  --border-subtle: #E6E1D6;
-  --ink-primary: #121418;
-  --ink-secondary: #585F6D;
-  --accent-vermilion: #E63920;
-  --accent-amber: #D97706;
-  --accent-alpine: #059669;
-  --font-serif: 'Fraunces', Georgia, serif;
-  --font-sans: 'Plus Jakarta Sans', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
-  --radius-tight: 4px;
-  --radius-card: 6px;
-  --radius-pill: 9999px;
-  color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg-ground: #0D0F12;
-    --bg-surface: #14171D;
-    --bg-surface-raised: #1C212B;
-    --border-rule: #232934;
-    --border-subtle: #191E27;
-    --ink-primary: #F3F1EC;
-    --ink-secondary: #9FA7B5;
-    --accent-vermilion: #FF472E;
-    color-scheme: dark;
-  }
+      <pre class="code-body" id="code-snippet"><code>:root {
+  --jv-bg-ground: #F9F7F3;
+  --jv-bg-surface: #FFFFFF;
+  --jv-border-subtle: #E6E1D8;
+  --jv-ink-primary: #1C241E;
+  --jv-ink-secondary: #566459;
+  --jv-olive: #4F6A4B;
+  --jv-olive-soft: #EBF1EA;
+  --jv-clay: #C2705C;
+  --jv-sky: #6B8E9E;
+  --jv-lichen: #C29B4D;
+  --jv-font-display: 'Newsreader', Georgia, serif;
+  --jv-font-body: 'Plus Jakarta Sans', sans-serif;
+  --jv-radius-card: 14px;
+  --jv-radius-pill: 9999px;
 }</code></pre>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="brand-footer">
-    <div>JV Studio Visual System • Designed for Kaltura & Fieldcraft Engineering</div>
-    <div>Specification Revision 2026.10 // Continuous Evolution</div>
+  <footer class="footer-bar">
+    <div>JV Studio • Mountain Fieldcraft & Education Design System</div>
+    <div>Olive & Pastel Standard • 2026</div>
   </footer>
 
 </div>
 
 <script>
-// Theme switching logic
 const root = document.documentElement;
 const btnSystem = document.getElementById('btn-theme-system');
 const btnLight = document.getElementById('btn-theme-light');
 const btnDark = document.getElementById('btn-theme-dark');
 
-function setActiveThemeBtn(activeBtn) {
-  [btnSystem, btnLight, btnDark].forEach(btn => btn.classList.remove('active'));
+function setActiveTheme(activeBtn) {
+  [btnSystem, btnLight, btnDark].forEach(b => b.classList.remove('active'));
   activeBtn.classList.add('active');
 }
 
 btnSystem.addEventListener('click', () => {
   root.removeAttribute('data-theme');
-  setActiveThemeBtn(btnSystem);
+  setActiveTheme(btnSystem);
 });
 
 btnLight.addEventListener('click', () => {
   root.setAttribute('data-theme', 'light');
-  setActiveThemeBtn(btnLight);
+  setActiveTheme(btnLight);
 });
 
 btnDark.addEventListener('click', () => {
   root.setAttribute('data-theme', 'dark');
-  setActiveThemeBtn(btnDark);
+  setActiveTheme(btnDark);
 });
 
-// Code Snippet Tab Switching
-const tabCss = document.getElementById('tab-css-btn');
-const tabCard = document.getElementById('tab-card-btn');
-const codeDisplay = document.getElementById('code-snippet-display');
-const copyBtn = document.getElementById('btn-copy-code');
-
-const cssCode = `/* === JV STUDIO BASE TOKENS (LIGHT + DARK READY) === */
-:root {
-  --bg-ground: #F6F4EE;
-  --bg-surface: #FFFFFF;
-  --bg-surface-raised: #EFECE3;
-  --border-rule: #D8D2C5;
-  --border-subtle: #E6E1D6;
-  --ink-primary: #121418;
-  --ink-secondary: #585F6D;
-  --accent-vermilion: #E63920;
-  --accent-amber: #D97706;
-  --accent-alpine: #059669;
-  --font-serif: 'Fraunces', Georgia, serif;
-  --font-sans: 'Plus Jakarta Sans', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
-  --radius-tight: 4px;
-  --radius-card: 6px;
-  --radius-pill: 9999px;
-  color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg-ground: #0D0F12;
-    --bg-surface: #14171D;
-    --bg-surface-raised: #1C212B;
-    --border-rule: #232934;
-    --border-subtle: #191E27;
-    --ink-primary: #F3F1EC;
-    --ink-secondary: #9FA7B5;
-    --accent-vermilion: #FF472E;
-    color-scheme: dark;
-  }
-}`;
-
-const cardCode = `<div class="jv-card" style="background:var(--bg-surface); border:1px solid var(--border-rule); border-radius:6px; padding:24px; color:var(--ink-primary); font-family:var(--font-sans);">
-  <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px;">
-    <div>
-      <div style="font-family:var(--font-mono); font-size:10px; color:var(--accent-vermilion); letter-spacing:0.1em; text-transform:uppercase;">[ DOSSIER 01 ]</div>
-      <h3 style="font-family:var(--font-serif); font-size:22px; font-weight:400; margin-top:2px;">Executive Evaluation <em>Summary</em></h3>
-    </div>
-    <span style="font-family:var(--font-mono); font-size:11px; padding:4px 10px; border-radius:999px; background:var(--accent-alpine-soft); color:var(--accent-alpine); border:1px solid var(--accent-alpine);">Exemplary</span>
-  </div>
-  <!-- Metric Instruments -->
-  <div style="display:flex; gap:12px;">
-    <div style="flex:1; background:var(--bg-surface-raised); border:1px solid var(--border-subtle); padding:14px; border-radius:4px;">
-      <div style="font-family:var(--font-mono); font-size:10px; color:var(--ink-secondary);">SCORE</div>
-      <div style="font-family:var(--font-serif); font-size:32px; font-weight:300;">48.0 <span style="font-size:14px; color:var(--ink-secondary);">/50</span></div>
-    </div>
-  </div>
-</div>`;
-
-tabCss.addEventListener('click', () => {
-  tabCss.classList.add('active');
-  tabCard.classList.remove('active');
-  codeDisplay.textContent = cssCode;
-});
-
-tabCard.addEventListener('click', () => {
-  tabCard.classList.add('active');
-  tabCss.classList.remove('active');
-  codeDisplay.textContent = cardCode;
-});
+const copyBtn = document.getElementById('btn-copy');
+const codeSnippet = document.getElementById('code-snippet');
 
 copyBtn.addEventListener('click', () => {
-  const text = codeDisplay.textContent;
-  navigator.clipboard.writeText(text).then(() => {
-    const orig = copyBtn.innerHTML;
-    copyBtn.innerHTML = '<span>✓</span> Copied!';
-    setTimeout(() => { copyBtn.innerHTML = orig; }, 2000);
-  }).catch(() => {
-    copyBtn.innerText = 'Select to copy';
+  navigator.clipboard.writeText(codeSnippet.textContent).then(() => {
+    copyBtn.textContent = 'Copied!';
+    setTimeout(() => { copyBtn.textContent = 'Copy CSS'; }, 2000);
   });
 });
 </script>

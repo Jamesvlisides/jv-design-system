@@ -1,161 +1,202 @@
 /* ==========================================================================
    JV STUDIO DESIGN SYSTEM (jv-brand.css)
-   Aesthetic: Editorial Tactile (Physical/Archival) + Post-Digital Instrument
+   Aesthetic: Mountain Fieldcraft & Alpine Education
+   Tones: Olive Green, Muted Moss, Soft Terracotta & Linen Pastels
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Warm Alabaster Linen Ground */
-  --jv-bg-ground: #F6F4EE;
+  /* Warm Alpine Linen & Mist Ground (Light Mode) */
+  --jv-bg-ground: #F9F7F3;
   --jv-bg-surface: #FFFFFF;
-  --jv-bg-surface-raised: #EFECE3;
-  --jv-bg-surface-dim: #E8E4D9;
+  --jv-bg-surface-soft: #F2EFE9;
+  --jv-bg-surface-elevated: #E9E5DD;
 
-  /* Hairline Rules */
-  --jv-border-rule: #D8D2C5;
-  --jv-border-subtle: #E6E1D6;
-  --jv-border-emphasis: #23272F;
+  /* Natural Earth Borders & Lines */
+  --jv-border-subtle: #E6E1D8;
+  --jv-border-rule: #D5CEBF;
+  --jv-border-emphasis: #445642;
 
-  /* Typography Colors */
-  --jv-ink-primary: #121418;
-  --jv-ink-secondary: #585F6D;
-  --jv-ink-muted: #88909D;
-  --jv-ink-faint: #B5BAC3;
+  /* Typography & Ink (Earthy Charcoals) */
+  --jv-ink-primary: #1C241E;
+  --jv-ink-secondary: #566459;
+  --jv-ink-muted: #839185;
+  --jv-ink-faint: #B8C2B9;
 
-  /* Physical Signal Accents */
-  --jv-accent-vermilion: #E63920;      /* Editorial stamp */
-  --jv-accent-vermilion-soft: #FDECE9;
-  --jv-accent-amber: #D97706;          /* Instrument telemetry */
-  --jv-accent-amber-soft: #FEF3C7;
-  --jv-accent-alpine: #059669;         /* Field green / verified */
-  --jv-accent-alpine-soft: #D1FAE5;
-  --jv-accent-cobalt: #1D4ED8;         /* Blueprint cobalt */
-  --jv-accent-cobalt-soft: #DBEAFE;
+  /* Mountain & Education Signature Palette */
+  --jv-olive: #4F6A4B;               /* Classic mountain pine / olive */
+  --jv-olive-deep: #324730;
+  --jv-olive-soft: #EBF1EA;          /* Pastel sage tint */
 
-  /* Typography Families */
-  --jv-font-serif: 'Fraunces', Georgia, serif;
-  --jv-font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  --jv-font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --jv-moss: #768F6F;                /* Muted forest moss */
+  --jv-moss-soft: #EEF4ED;
 
-  /* Geometry */
-  --jv-radius-tight: 3px;
-  --jv-radius-card: 6px;
+  --jv-clay: #C2705C;                /* Warm terracotta pastel */
+  --jv-clay-soft: #F9EBE7;
+
+  --jv-sky: #6B8E9E;                 /* Mountain lake pastel blue */
+  --jv-sky-soft: #E9F1F4;
+
+  --jv-lichen: #C29B4D;              /* Warm lichen / field amber */
+  --jv-lichen-soft: #FBF4E6;
+
+  /* Typography Stacks (Streamlined to 2 Warm, Human Faces) */
+  --jv-font-display: 'Newsreader', Georgia, serif;
+  --jv-font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Organic Geometry & Radius */
+  --jv-radius-inner: 8px;
+  --jv-radius-card: 14px;
   --jv-radius-pill: 9999px;
 
-  /* Tactile Shadows */
-  --jv-shadow-tactile: 0 1px 2px rgba(18, 20, 24, 0.05), 0 4px 12px rgba(18, 20, 24, 0.03);
-  --jv-shadow-float: 0 16px 36px -10px rgba(18, 20, 24, 0.12), 0 0 0 1px var(--jv-border-rule);
+  /* Gentle Organic Shadows */
+  --jv-shadow-subtle: 0 1px 3px rgba(35, 45, 37, 0.05), 0 8px 24px -6px rgba(35, 45, 37, 0.06);
+  --jv-shadow-card: 0 4px 20px -2px rgba(35, 45, 37, 0.07), 0 0 0 1px var(--jv-border-subtle);
 
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --jv-bg-ground: #0D0F12;
-    --jv-bg-surface: #14171D;
-    --jv-bg-surface-raised: #1C212B;
-    --jv-bg-surface-dim: #090A0C;
+    /* Deep Alpine Pine & Spruce Night */
+    --jv-bg-ground: #111814;
+    --jv-bg-surface: #18221D;
+    --jv-bg-surface-soft: #1F2B25;
+    --jv-bg-surface-elevated: #28362F;
 
-    --jv-border-rule: #232934;
-    --jv-border-subtle: #191E27;
-    --jv-border-emphasis: #EAE6DE;
+    --jv-border-subtle: #24332B;
+    --jv-border-rule: #33443B;
+    --jv-border-emphasis: #8EA888;
 
-    --jv-ink-primary: #F3F1EC;
-    --jv-ink-secondary: #9FA7B5;
-    --jv-ink-muted: #646C7B;
-    --jv-ink-faint: #3B4250;
+    --jv-ink-primary: #F2F5F2;
+    --jv-ink-secondary: #ADC0B2;
+    --jv-ink-muted: #7A8E80;
+    --jv-ink-faint: #445449;
 
-    --jv-accent-vermilion: #FF472E;
-    --jv-accent-vermilion-soft: rgba(255, 71, 46, 0.12);
-    --jv-accent-amber: #F59E0B;
-    --jv-accent-amber-soft: rgba(245, 158, 11, 0.12);
-    --jv-accent-alpine: #10B981;
-    --jv-accent-alpine-soft: rgba(16, 185, 129, 0.12);
-    --jv-accent-cobalt: #3B82F6;
-    --jv-accent-cobalt-soft: rgba(59, 130, 246, 0.12);
+    --jv-olive: #7FA07B;
+    --jv-olive-deep: #A4C1A0;
+    --jv-olive-soft: rgba(127, 160, 123, 0.16);
 
-    --jv-shadow-tactile: 0 2px 4px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.04);
-    --jv-shadow-float: 0 20px 48px -12px rgba(0, 0, 0, 0.7), 0 0 0 1px var(--jv-border-rule);
+    --jv-moss: #8FA988;
+    --jv-moss-soft: rgba(143, 169, 136, 0.16);
+
+    --jv-clay: #E08F7D;
+    --jv-clay-soft: rgba(224, 143, 125, 0.16);
+
+    --jv-sky: #89AFBF;
+    --jv-sky-soft: rgba(137, 175, 191, 0.16);
+
+    --jv-lichen: #DCB368;
+    --jv-lichen-soft: rgba(220, 179, 104, 0.16);
+
+    --jv-shadow-subtle: 0 4px 16px rgba(0, 0, 0, 0.35);
+    --jv-shadow-card: 0 12px 32px -8px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--jv-border-subtle);
 
     color-scheme: dark;
   }
 }
 
 :root[data-theme="dark"] {
-  --jv-bg-ground: #0D0F12;
-  --jv-bg-surface: #14171D;
-  --jv-bg-surface-raised: #1C212B;
-  --jv-bg-surface-dim: #090A0C;
+  --jv-bg-ground: #111814;
+  --jv-bg-surface: #18221D;
+  --jv-bg-surface-soft: #1F2B25;
+  --jv-bg-surface-elevated: #28362F;
 
-  --jv-border-rule: #232934;
-  --jv-border-subtle: #191E27;
-  --jv-border-emphasis: #EAE6DE;
+  --jv-border-subtle: #24332B;
+  --jv-border-rule: #33443B;
+  --jv-border-emphasis: #8EA888;
 
-  --jv-ink-primary: #F3F1EC;
-  --jv-ink-secondary: #9FA7B5;
-  --jv-ink-muted: #646C7B;
-  --jv-ink-faint: #3B4250;
+  --jv-ink-primary: #F2F5F2;
+  --jv-ink-secondary: #ADC0B2;
+  --jv-ink-muted: #7A8E80;
+  --jv-ink-faint: #445449;
 
-  --jv-accent-vermilion: #FF472E;
-  --jv-accent-vermilion-soft: rgba(255, 71, 46, 0.12);
-  --jv-accent-amber: #F59E0B;
-  --jv-accent-amber-soft: rgba(245, 158, 11, 0.12);
-  --jv-accent-alpine: #10B981;
-  --jv-accent-alpine-soft: rgba(16, 185, 129, 0.12);
-  --jv-accent-cobalt: #3B82F6;
-  --jv-accent-cobalt-soft: rgba(59, 130, 246, 0.12);
+  --jv-olive: #7FA07B;
+  --jv-olive-deep: #A4C1A0;
+  --jv-olive-soft: rgba(127, 160, 123, 0.16);
 
-  --jv-shadow-tactile: 0 2px 4px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.04);
-  --jv-shadow-float: 0 20px 48px -12px rgba(0, 0, 0, 0.7), 0 0 0 1px var(--jv-border-rule);
+  --jv-moss: #8FA988;
+  --jv-moss-soft: rgba(143, 169, 136, 0.16);
+
+  --jv-clay: #E08F7D;
+  --jv-clay-soft: rgba(224, 143, 125, 0.16);
+
+  --jv-sky: #89AFBF;
+  --jv-sky-soft: rgba(137, 175, 191, 0.16);
+
+  --jv-lichen: #DCB368;
+  --jv-lichen-soft: rgba(220, 179, 104, 0.16);
+
+  --jv-shadow-subtle: 0 4px 16px rgba(0, 0, 0, 0.35);
+  --jv-shadow-card: 0 12px 32px -8px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--jv-border-subtle);
 
   color-scheme: dark;
 }
 
-/* Base Component Classes */
-.jv-container {
+/* ==========================================================================
+   REUSABLE MOUNTAIN / EDUCATION COMPONENTS
+   ========================================================================== */
+
+.jv-card {
   background: var(--jv-bg-surface);
-  border: 1px solid var(--jv-border-rule);
+  border: 1px solid var(--jv-border-subtle);
   border-radius: var(--jv-radius-card);
   padding: 24px;
-  box-shadow: var(--jv-shadow-tactile);
+  box-shadow: var(--jv-shadow-card);
   color: var(--jv-ink-primary);
-  font-family: var(--jv-font-sans);
+  font-family: var(--jv-font-body);
 }
 
-.jv-index-label {
-  font-family: var(--jv-font-mono);
-  font-size: 10.5px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--jv-accent-vermilion);
-  font-weight: 700;
-}
-
-.jv-serif-heading {
-  font-family: var(--jv-font-serif);
-  font-weight: 400;
-  letter-spacing: -0.015em;
+.jv-heading {
+  font-family: var(--jv-font-display);
+  font-weight: 500;
+  letter-spacing: -0.01em;
   color: var(--jv-ink-primary);
+  line-height: 1.25;
 }
 
-.jv-serif-heading em {
+.jv-heading em {
   font-style: italic;
-  font-weight: 300;
-  color: var(--jv-accent-vermilion);
+  font-weight: 400;
+  color: var(--jv-olive);
 }
 
-.jv-tag-pill {
-  font-family: var(--jv-font-mono);
-  font-size: 11px;
+.jv-label {
+  font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  padding: 4px 12px;
-  border-radius: var(--jv-radius-pill);
-  border: 1px solid var(--jv-border-rule);
-  background: var(--jv-bg-surface-raised);
-  color: var(--jv-ink-primary);
+  color: var(--jv-ink-secondary);
+  letter-spacing: 0.02em;
+}
+
+.jv-tag {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: var(--jv-radius-pill);
+  background: var(--jv-olive-soft);
+  color: var(--jv-olive);
+  border: 1px solid rgba(79, 106, 75, 0.15);
+}
+
+.jv-tag-clay {
+  background: var(--jv-clay-soft);
+  color: var(--jv-clay);
+  border-color: rgba(194, 112, 92, 0.2);
+}
+
+.jv-tag-sky {
+  background: var(--jv-sky-soft);
+  color: var(--jv-sky);
+  border-color: rgba(107, 142, 158, 0.2);
+}
+
+.jv-tag-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
 }
